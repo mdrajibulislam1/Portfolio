@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD RAJIBUL ISLAM | Professional Video Editor & AI Specialist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS Variables for Theme Switching */
+        :root {
+            /* Light Mode Variables */
+            --bg-primary: linear-gradient(135deg, #f0f5ff 0%, #e6f0ff 100%);
+            --bg-secondary: white;
+            --bg-tertiary: linear-gradient(135deg, #f8f9fc 0%, #eef2f6 100%);
+            --text-primary: #333;
+            --text-secondary: #555;
+            --text-heading: #2c3e50;
+            --accent-gradient: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+            --card-bg: white;
+            --card-border: #eef2f7;
+            --shadow: 0 7px 25px rgba(0, 0, 0, 0.07);
+            --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+            --footer-bg: #2c3e50;
+            --icon-bg: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+        }
+        
+        [data-theme="dark"] {
+            /* Dark Mode Variables */
+            --bg-primary: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            --bg-secondary: #1e293b;
+            --bg-tertiary: linear-gradient(135deg, #0d1320 0%, #1a2438 100%);
+            --text-primary: #e2e8f0;
+            --text-secondary: #cbd5e1;
+            --text-heading: #f8fafc;
+            --accent-gradient: linear-gradient(90deg, #7c3aed 0%, #3b82f6 100%);
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --shadow: 0 7px 25px rgba(0, 0, 0, 0.25);
+            --hero-overlay: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+            --footer-bg: #0f172a;
+            --icon-bg: linear-gradient(135deg, #7c3aed 0%, #3b82f6 100%);
+        }
+        
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            scroll-behavior: smooth;
+            padding-top: 80px; /* Added to clear fixed header */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--text-heading);
+        }
+        
+        .section-title {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 5px;
+            background: var(--accent-gradient);
+            border-radius: 3px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(106, 17, 203, 0.2);
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(106, 17, 203, 0.3);
+        }
+        
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--card-border);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            border-color: #d6e4ff;
+        }
+        
+        /* Header & Navigation */
+        header {
+            background: var(--bg-secondary);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-heading);
+            text-decoration: none;
+        }
+        
+        .logo span {
+            color: #6a11cb;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #6a11cb;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--text-heading);
+            cursor: pointer;
+        }
+        
+        /* Theme Toggle Button */
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-heading);
+            font-size: 1.25rem;
+            cursor: pointer;
+            margin-left: 20px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .theme-toggle:hover {
+            background: rgba(106, 17, 203, 0.1);
+        }
+        
+        /* Profile Container */
+        .profile-container {
+            max-width: 1900px;
+            width: 100%;
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+            margin: 0 auto 30px; /* Centered the container */
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Profile Header */
+        .profile-header {
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            padding: 40px;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .profile-header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .profile-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 250px;
+            height: 250px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+            transition: all 0.3s ease;
+            background-color: white;
+            padding: 10px;
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .profile-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 2;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        
+        .profile-title {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content-section {
+            padding: 40px;
+            background: var(--bg-secondary);
+        }
+
+        /* Contact Section Updates */
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding: 15px;
+            background: rgba(106, 17, 203, 0.1);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border: 1px solid var(--card-border);
+        }
+
+        .contact-item:hover {
+            background: rgba(106, 17, 203, 0.2);
+            transform: translateX(5px);
+            border-color: rgba(106, 17, 203, 0.3);
+        }
+
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--icon-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        /* Theme Compatibility */
+        [data-theme="dark"] .skill {
+            background: rgba(106, 17, 203, 0.3);
+        }
+
+        [data-theme="dark"] .contact-item {
+            background: rgba(15, 52, 96, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .about-header {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-image {
+                margin-bottom: 20px;
+            }
+        }
+        
+        /* Skills Section */
+        #skills {
+            background: var(--bg-tertiary);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .skill-card {
+            text-align: center;
+            padding: 30px;
+        }
+        
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--icon-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            color: white;
+            font-size: 30px;
+        }
+        
+        .skill-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Services Section */
+        .services-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-btn {
+            padding: 12px 25px;
+            margin: 0 10px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--card-border);
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .tab-btn.active {
+            background: var(--accent-gradient);
+            color: white;
+            border-color: transparent;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            padding: 25px;
+        }
+        
+        .service-card i {
+            font-size: 40px;
+            margin-bottom: 20px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .service-card h3 {
+            margin-bottom: 15px;
+        }
+        
+        /* Video Gallery Section */
+        #gallery {
+            background: var(--bg-secondary);
+        }
+        
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .video-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .video-info {
+            padding: 15px;
+            background: var(--bg-secondary);
+        }
+        
+        .video-info h3 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        
+        .video-info p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Testimonials Section */
+        #testimonials {
+            background: var(--bg-tertiary);
+        }
+        
+        .testimonial-slider {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-slide {
+            display: none;
+        }
+        
+        .testimonial-slide.active {
+            display: block;
+        }
+        
+        .testimonial-card {
+            position: relative;
+            padding: 30px;
+        }
+        
+        .testimonial-card i {
+            font-size: 30px;
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        
+        .client-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .client-img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 15px;
+        }
+        
+        .client-name {
+            font-weight: 600;
+        }
+        
+        .slider-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .slider-navigation button {
+            background: var(--accent-gradient);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .slider-navigation button:hover {
+            transform: scale(1.1);
+        }
+        
+        
+        /* FAQ Section */
+        #faq {
+            background: var(--bg-secondary);
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .accordion-header {
+            padding: 15px 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        [data-theme="dark"] .accordion-header {
+            background: linear-gradient(135deg, #1a2438 0%, #0d1320 100%);
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: var(--bg-secondary);
+        }
+        
+        .accordion-content p {
+            padding: 20px 0;
+            color: var(--text-primary);
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 300px;
+        }
+        
+        /* Contact Section */
+        #contact {
+            background: var(--bg-tertiary);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-item i {
+            width: 40px;
+            height: 40px;
+            background: var(--icon-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: var(--icon-bg);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--footer-bg);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        .footer-logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-logo span {
+            color: #6a11cb;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #6a11cb;
+        }
+        
+        .copyright {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--accent-gradient);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-img {
+                margin-bottom: 30px;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--bg-secondary);
+                flex-direction: column;
+                align-items: center;
+                padding: 40px 0;
+                transition: left 0.3s;
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                left: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .section-title {
+                font-size: 30px;
+            }
+            
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            section {
+                padding: 60px 0;
+            }
+            
+            .section-title {
+                font-size: 28px;
+            }
+            
+            .btn {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .accordion-header {
+                padding: 12px 15px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">MD RAJIBUL <span>ISLAM</span></a>
+                <div class="nav-right">
+                    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="mobile-menu-btn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Profile Container -->
+    <div class="profile-container">
+        <!-- Profile Header -->
+        <div class="profile-header">
+            <!-- Fixed image URL (removed extra 'd') -->
+            <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="Picsart-24-04-28-22-47-32-422" border="0" class="profile-img">
+            <h1 class="profile-name">MD RAJIBUL ISLAM</h1>
+            <p class="profile-title">Professional Video Editor • Motion Designer • AI Content Creator</p>
+            
+            
+            </div>
+        </div>
+        
+        <!-- Profile Content -->
+        <div class="profile-content">
+            <!-- About Section -->
+            <div id="about" class="content-section"> <!-- Added id for navigation -->
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text" style="animation: fadeIn 1.5s ease-in-out;">Hi, I’m Rajibul <br>
+A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.</p>
+                <br>
+                
+                    <p class="about-text" style="animation: fadeIn 2s ease-in-out;">How I Work  <br>
+I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.</p>
+               
+
+                <style>
+                    @keyframes fadeIn {
+                        from {
+                            opacity: 0;
+                            transform: translateY(20px);
+                        }
+                        to {
+                            opacity: 1;
+                            transform: translateY(0);
+                        }
+                    }
+                </style>
+            </div>
+        </div>
+    </div> <!-- Added closing div for profile-container -->
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills & Tools</h2>
+            <div class="skills-grid">
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3>Video Editing</h3>
+                    <p>Adobe Premiere Pro, Final Cut Pro, DaVinci Resolve</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-magic"></i>
+                    </div>
+                    <h3>Motion Graphics</h3>
+                    <p>After Effects, Blender, Cinema 4D</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p>Photoshop, Illustrator, Canva</p>
+                </div>
+                <div class="skill-card card">
+                    <div class="skill-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Tools</h3>
+                    <p>ChatGPT, Midjourney, Adobe Sensei, AI Voiceovers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2 class="section-title">My Services</h2>
+            <div class="services-tabs">
+                <button class="tab-btn active" data-tab="video-services">Video Services</button>
+                <button class="tab-btn" data-tab="ai-services">AI Services</button>
+            </div>
+            
+            <div id="video-services" class="tab-content active">
+                <div class="services-grid">
+                    <div class="service-card card">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube Editing</h3>
+                        <p>Engaging edits for vlogs, tutorials, reviews, and more with optimized pacing, transitions, and effects.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-video"></i>
+                        <h3>Documentary Edits</h3>
+                        <p>Thoughtful storytelling with proper narrative flow, b-roll integration, and emotional impact.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-user-tie"></i>
+                        <h3>Talking-head Videos</h3>
+                        <p>Clean edits for interviews, presentations, and educational content with professional polish.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-camera"></i>
+                        <h3>Vlogs</h3>
+                        <p>Dynamic edits that maintain authenticity while enhancing entertainment value.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-shopping-cart"></i>
+                        <h3>Product Promos</h3>
+                        <p>Highlight features and benefits with compelling visuals and persuasive pacing.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-briefcase"></i>
+                        <h3>Corporate Edits</h3>
+                        <p>Professional videos for businesses, training, and internal communications.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="ai-services" class="tab-content">
+                <div class="services-grid">
+                    <div class="service-card card">
+                        <i class="fas fa-keyboard"></i>
+                        <h3>Prompt Writing</h3>
+                        <p>Expertly crafted prompts for AI tools to generate exactly what you need.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-scroll"></i>
+                        <h3>Script Writing</h3>
+                        <p>AI-assisted script writing that maintains human authenticity and engagement.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-photo-film"></i>
+                        <h3>AI Video/Image Generation</h3>
+                        <p>Create custom visuals and video elements using the latest AI tools.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-microphone"></i>
+                        <h3>AI Voiceovers</h3>
+                        <p>Natural-sounding male and female voices in multiple languages and accents.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-paintbrush"></i>
+                        <h3>AI Image Editing</h3>
+                        <p>Enhance, restore, or transform images with AI-powered tools.</p>
+                    </div>
+                    <div class="service-card card">
+                        <i class="fas fa-thumbs-up"></i>
+                        <h3>AI Thumbnail Design</h3>
+                        <p>Data-driven thumbnail designs optimized for maximum click-through rates.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+  <!-- Video Gallery Section -->
+<section id="gallery">
+    <div class="container">
+        <h2 class="section-title">YouTube Video Gallery</h2>
+        
+    
+        </div>
+        
+        <div class="video-grid">
+            <!-- Video 1 -->
+            <div class="video-card card" data-category="travel">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/ysMB3GjVpw8?si=FaKHaIfmAn1XGIXW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Documentary & Motion graphic</h3>
+                    <p>Premiere Pro | After Effects & AI</p>
+                </div>
+            </div>
+            
+            <!-- Video 2 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/evWCEZ_CH2I?si=VHDWAO0naanYw_qv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Animation & Motion Graphic</h3>
+                    <p>Detailed Analysis with B-Roll</p>
+                </div>
+            </div>
+            
+            <!-- Video 3 -->
+            <div class="video-card card" data-category="travel">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/IMNnmTH2ans?si=vg1zY6F6oingtbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>YouTube video Editing</h3>
+                    <p>Animation & Motion Graphic</p>
+                </div>
+            </div>
+            
+            <!-- Video 4 -->
+            <div class="video-card card" data-category="corporate">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7wtfhZwyrcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Corporate Brand Video</h3>
+                    <p>Professional Business Presentation</p>
+                </div>
+            </div>
+            
+            <!-- Video 5 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Video Editing Masterclass</h3>
+                    <p>Advanced Techniques Explained</p>
+                </div>
+            </div>
+            
+            <!-- Video 6 -->
+            <div class="video-card card" data-category="travel">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Cultural Documentary</h3>
+                    <p>Local Traditions Showcase</p>
+                </div>
+            </div>
+            
+            <!-- Video 7 -->
+            <div class="video-card card" data-category="corporate">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/OPf0YbXqDm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Company Profile Video</h3>
+                    <p>Corporate Identity Presentation</p>
+                </div>
+            </div>
+            
+            <!-- Video 8 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/09R8_2nJtjg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Motion Graphics Tutorial</h3>
+                    <p>After Effects Techniques</p>
+                </div>
+            </div>
+            
+            <!-- Video 9 -->
+            <div class="video-card card" data-category="travel">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/AjPau5QYtYs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Adventure Travel Series</h3>
+                    <p>Extreme Sports Compilation</p>
+                </div>
+            </div>
+            
+            <!-- Video 10 -->
+            <div class="video-card card" data-category="corporate">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/pRpeEdMmmQ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Product Launch Event</h3>
+                    <p>Corporate Event Coverage</p>
+                </div>
+            </div>
+            
+            <!-- Video 11 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RgKAFK5djSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Video Editing Guide</h3>
+                    <p>Cutting-Edge Techniques</p>
+                </div>
+            </div>
+            
+            <!-- Video 12 -->
+            <div class="video-card card" data-category="travel">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/PT2_F-1esPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Cityscape Time-Lapse</h3>
+                    <p>Urban Photography Montage</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Abdur Labib transformed our corporate training videos into engaging content that our employees actually want to watch. The AI-enhanced scripts and professional editing made all the difference.</p>
+                        <div class="client-info">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img">
+                            <div>
+                                <div class="client-name">John Smith</div>
+                                <div>CEO, TechSolutions</div>
+                            </div>
+                        </div>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>Working with Rajibul has been a game-changer for my YouTube channel. My subscriber count doubled after implementing his editing style and thumbnail designs. The AI tools he uses save me so much time!</p>
+                        <div class="client-info">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img">
+                            <div>
+                                <div class="client-name">Sarah Johnson</div>
+                                <div>Travel Vlogger</div>
+                            </div>
+                        </div>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-card card">
+                        <i class="fas fa-quote-left"></i>
+                        <p>The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.</p>
+                        <div class="client-info">
+                            <img src="https://i.ibb.co/Mk9zJB7J/314142530-5598480780266775-1400325021358907771-n.jpg" alt="Client" class="client-img">
+                            <div>
+                                <div class="client-name">Hightechvaly</div>
+                                <div>Documentary Producer</div>
+                            </div>
+                        </div>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                    </div>
+                </div>
+                <div class="slider-navigation">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What are your rates?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Pricing varies based on project complexity, duration, and specific requirements. Basic video editing starts at $50 per minute of final content. AI services start at $30 per task. Contact me with your project details for an accurate quote.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>How many revisions do you allow?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>I include 2 rounds of revisions in my standard pricing. Additional revisions can be arranged at an hourly rate. For AI services, we provide unlimited iterations until you're satisfied with the output.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What's your typical turnaround time?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>For a standard 10-minute video, turnaround is 3-5 business days. Rush services are available for an additional fee. AI services typically deliver within 24-48 hours depending on complexity.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>What file formats do you deliver?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>Final videos are delivered in MP4 (H.264) format by default, but I can provide any format you need (MOV, AVI, ProRes, etc.). For AI services, we provide standard image formats (JPG, PNG) or specified formats.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">
+                        <span>Who owns the copyright to the final product?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="accordion-content">
+                        <p>You retain full rights to all final deliverables. I only request permission to include the work in my portfolio unless otherwise specified. For AI-generated content, all rights are transferred to you upon payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <a href="mailto:mdrajibulislam360@gmail.com">mdrajibulislam360@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <a href="https://wa.me/880156006530" target="_blank">+880 156006530</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h4>Phone</h4>
+                            <a href="tel:+880156006530">+880 156006530</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <span>Dhaka, Bangladesh (Remote work available worldwide)</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Availability</h4>
+                            <span>Full time</span>
+                        </div>
+                    </div>
+                    
+                    <h3 style="margin-top: 30px;">Follow Me</h3>
+                    <div class="social-links">
+                        <a href="https://www.youtube.com/@abdurlabib1" target="_blank"><i class="fab fa-youtube"></i></a>
+                         <a href="https://www.facebook.com/@abdurlabib2" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/abdurlabib1/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.pinterest.com/abdurlabib/" target="_blank"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">MD RAJIBUL <span>ISLAM</span></div>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#services">Services</a></li>
+            
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="copyright">© 2023 MD RAJIBUL ISLAM. All Rights Reserved.</div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navLinks.classList.contains('active') ? 
+                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            });
+        });
+        
+        // Services Tab Switching
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active class from all buttons and contents
+                tabBtns.forEach(btn => btn.classList.remove('active'));
+                tabContents.forEach(content => content.classList.remove('active'));
+                
+                // Add active class to clicked button and corresponding content
+                btn.classList.add('active');
+                const tabId = btn.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // FAQ Accordion
+        const accordionItems = document.querySelectorAll('.accordion-item');
+        
+        accordionItems.forEach(item => {
+            const header = item.querySelector('.accordion-header');
+            
+            header.addEventListener('click', () => {
+                // Close all other items
+                accordionItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('i').className = 'fas fa-chevron-down';
+                    }
+                });
+                
+                // Toggle current item
+                item.classList.toggle('active');
+                const icon = item.querySelector('i');
+                icon.className = item.classList.contains('active') ? 
+                    'fas fa-chevron-up' : 'fas fa-chevron-down';
+            });
+        });
+        
+        // Testimonial Slider
+        const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        let currentSlide = 0;
+        
+        function showSlide(n) {
+            testimonialSlides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + testimonialSlides.length) % testimonialSlides.length;
+            testimonialSlides[currentSlide].classList.add('active');
+        }
+        
+        prevBtn.addEventListener('click', () => {
+            showSlide(currentSlide - 1);
+        });
+        
+        nextBtn.addEventListener('click', () => {
+            showSlide(currentSlide + 1);
+        });
+        
+        // Auto slide every 5 seconds
+        setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 5000);
+        
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopBtn.classList.add('active');
+            } else {
+                backToTopBtn.classList.remove('active');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                
+                // Handle back to top
+                if (href === '#') {
+                    e.preventDefault();
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                    return;
+                }
+                
+                // Skip if it's a different kind of anchor (like #!)
+                if (href === '#!' || href === '') return;
+                
+                e.preventDefault();
+                
+                const targetElement = document.querySelector(href);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Dark Mode Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const themeIcon = themeToggle.querySelector('i');
+        
+        // Check for saved theme or prefer-color-scheme
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        let currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+        
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            
+            // Update the icon
+            if (theme === 'dark') {
+                themeIcon.className = 'fas fa-sun';
+            } else {
+                themeIcon.className = 'fas fa-moon';
+            }
+        }
+        
+        // Set initial theme
+        setTheme(currentTheme);
+        
+        // Toggle theme on button click
+        themeToggle.addEventListener('click', () => {
+            currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+            setTheme(currentTheme);
+        });
+    </script>
+</body>
+</html>

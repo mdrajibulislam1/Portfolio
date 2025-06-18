@@ -874,31 +874,52 @@
         <!-- Profile Content -->
         <div class="profile-content">
             <!-- About Section -->
-            <div id="about" class="content-section"> <!-- Added id for navigation -->
-                <h2 class="section-title">About Me</h2>
-                <p class="about-text" style="animation: fadeIn 1.5s ease-in-out;">Hi, I’m Rajibul <br>
-A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.</p>
-                <br>
-                
-                    <p class="about-text" style="animation: fadeIn 2s ease-in-out;">How I Work  <br>
-I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.</p>
-               
+            <div id="about" class="content-section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-container" style="max-width: 800px; margin: 0 auto;">
+            <p class="about-text" style="
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            margin-bottom: 2rem;
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--card-border);
+            text-transform: capitalize;
+            ">
+            Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
+            <br><br>
+            A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
+            </p>
+            
+            <p class="about-text" style="
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: var(--text-primary);
+            padding: 2rem;
+            background: var(--bg-secondary);
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--card-border);
+            transition: transform 0.3s ease;
+            text-transform: capitalize;
+            ">
+            <span style="font-size: 1.4rem; font-weight: 600; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">How I Work</span>
+            <br><br>
+            I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
+            </p>
+            </div>
 
-                <style>
-                    @keyframes fadeIn {
-                        from {
-                            opacity: 0;
-                            transform: translateY(20px);
-                        }
-                        to {
-                            opacity: 1;
-                            transform: translateY(0);
-                        }
-                    }
-                </style>
+            <style>
+            .about-text:hover {
+                transform: translateY(-5px);
+            }
+            </style>
             </div>
         </div>
-    </div> <!-- Added closing div for profile-container -->
+        </div>
 
     <!-- Skills Section -->
     <section id="skills">
@@ -1150,7 +1171,40 @@ I keep things honest, clean, and engaging. My edits are built on solid storytell
                 </div>
             </div>
             
-            <!-- Video 12 -->
+ <!-- Video 12 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RgKAFK5djSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Video Editing Guide</h3>
+                    <p>Cutting-Edge Techniques</p>
+                </div>
+            </div>
+
+             <!-- Video 13 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RgKAFK5djSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Video Editing Guide</h3>
+                    <p>Cutting-Edge Techniques</p>
+                </div>
+            </div>
+
+             <!-- Video 14 -->
+            <div class="video-card card" data-category="tutorial">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/RgKAFK5djSk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>AI Video Editing Guide</h3>
+                    <p>Cutting-Edge Techniques</p>
+                </div>
+            </div>
+
+            <!-- Video 15 -->
             <div class="video-card card" data-category="travel">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/PT2_F-1esPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -1163,6 +1217,36 @@ I keep things honest, clean, and engaging. My edits are built on solid storytell
         </div>
     </div>
 </section>
+
+<div class="container" style="text-align: center; margin: 30px auto; width: 100%; max-width: 100%;">
+    <a href="https://www.youtube.com/@abdurlabib1" target="_blank" class="btn" 
+        style="display: inline-block; 
+               padding: 15px 40px; 
+               font-size: 1.2em; 
+               width: auto; 
+               border-radius: 50px;
+               animation: pulse 2s infinite;
+               text-align: center;">
+        <i class="fab fa-youtube" style="margin-right: 10px;"></i> See More Videos
+    </a>
+</div>
+
+<style>
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(106, 17, 203, 0.4);
+    }
+    70% {
+        transform: scale(1.05);
+        box-shadow: 0 0 0 15px rgba(106, 17, 203, 0);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(106, 17, 203, 0);
+    }
+}
+</style></a>
     <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
@@ -1204,11 +1288,11 @@ I keep things honest, clean, and engaging. My edits are built on solid storytell
                         <i class="fas fa-quote-left"></i>
                         <p>The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.</p>
                         <div class="client-info">
-                            <img src="https://i.ibb.co/Mk9zJB7J/314142530-5598480780266775-1400325021358907771-n.jpg" alt="Client" class="client-img">
-                            <div>
-                                <div class="client-name">Hightechvaly</div>
-                                <div>Documentary Producer</div>
-                            </div>
+                                <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="client-img">
+                                <div>
+                                    <div class="client-name">Hightechvaly</div>
+                                    <div>Documentary Producer</div>
+                                </div>
                         </div>
                         <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
                     </div>
@@ -1317,20 +1401,157 @@ I keep things honest, clean, and engaging. My edits are built on solid storytell
                         </div>
                     </div>
                     
-                    <h3 style="margin-top: 30px;">Follow Me</h3>
-                    <div class="social-links">
-                        <a href="https://www.youtube.com/@abdurlabib1" target="_blank"><i class="fab fa-youtube"></i></a>
-                         <a href="https://www.facebook.com/@abdurlabib2" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://www.instagram.com/abdurlabib1/" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://linkedin.com/in/yourlinkedin" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://twitter.com/yourtwitter" target="_blank"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.pinterest.com/abdurlabib/" target="_blank"><i class="fab fa-pinterest"></i></a>
-                        <a href="https://www.tiktok.com/abdurlabib1/" target="_blank"><i class="fab fa-tiktok"></i></a>
+
+                    <!-- Social Media Section -->
+                    <div class="social-section card">
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@abdurlabib1" target="_blank" class="social-btn youtube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a href="https://www.facebook.com/@abdurlabib2" target="_blank" class="social-btn facebook">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/abdurlabib1/" target="_blank" class="social-btn instagram">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" class="social-btn linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://twitter.com/yourtwitter" target="_blank" class="social-btn twitter">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="https://www.pinterest.com/abdurlabib/" target="_blank" class="social-btn pinterest">
+                                <i class="fab fa-pinterest-p"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+
+        <style>
+            .contact-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+                gap: 20px;
+                margin-bottom: 30px;
+            }
+
+            .contact-item {
+                display: flex;
+                align-items: center;
+                padding: 25px;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+
+            .contact-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .contact-item i {
+                font-size: 24px;
+                margin-right: 20px;
+                width: 50px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                background: var(--accent-gradient);
+                color: white;
+            }
+
+            .contact-details h4 {
+                margin-bottom: 5px;
+                color: var(--text-heading);
+                font-size: 1.1em;
+            }
+
+            .contact-link {
+                color: var(--text-secondary);
+                text-decoration: none;
+                transition: color 0.3s;
+            }
+
+            .contact-link:hover {
+                color: #6a11cb;
+            }
+
+            .contact-details small {
+                display: block;
+                color: var(--text-secondary);
+                font-size: 0.85em;
+                margin-top: 5px;
+            }
+
+            .social-section {
+                padding: 30px;
+                text-align: center;
+            }
+
+            .social-section h3 {
+                margin-bottom: 20px;
+                font-size: 1.5em;
+                background: var(--accent-gradient);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+            }
+
+            .social-links {
+                display: flex;
+                justify-content: center;
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+
+            .social-btn {
+                width: 45px;
+                height: 45px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                transition: all 0.3s ease;
+                background: var(--accent-gradient);
+            }
+
+            .social-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 15px rgba(106, 17, 203, 0.4);
+            }
+
+            .pulse {
+                animation: pulse 2s infinite;
+            }
+
+            @keyframes pulse {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.1);
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .contact-grid {
+                    grid-template-columns: 1fr;
+                }
+                
+                .social-links {
+                    gap: 10px;
+                }
+            }
+        </style>
+    </section></div>
 
     <!-- Footer -->
     <footer>

@@ -859,15 +859,15 @@
     </header>
 
     <!-- Profile Container -->
-    <div class="profile-container profile-animate"></div>
+    <div class="profile-container profile-animate"></div></div>
         <!-- Profile Header -->
-        <div class="profile-header">
+        <div class="profile-header profile-bg-effect" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
             <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="MD RAJIBUL ISLAM" class="profile-img profile-img-animate">
             <h1 class="profile-name profile-name-animate">MD RAJIBUL ISLAM</h1>
             <p class="profile-title profile-title-animate">Professional Video Editor • Motion Designer • AI Content Creator</p>
         </div>
-    </div>
-    <style>
+        </div>
+        <style>
         /* Animation for profile container */
         .profile-animate {
             opacity: 0;
@@ -876,9 +876,27 @@
         }
         @keyframes profileFadeIn {
             to {
-                opacity: 1;
-                transform: translateY(0) scale(1);
+            opacity: 1;
+            transform: translateY(0) scale(1.03);
             }
+        }
+        /* Pop-up effect for background section */
+        .profile-bg-effect {
+            position: relative;
+            box-shadow: 0 8px 32px rgba(106,17,203,0.12), 0 2px 8px rgba(0,0,0,0.05);
+            border-radius: 0 0 32px 32px;
+            /* Only bottom corners rounded */
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 32px;
+            border-bottom-right-radius: 32px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            z-index: 1;
+            transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+        }
+        .profile-bg-effect:hover {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 16px 48px rgba(106,17,203,0.18), 0 4px 16px rgba(0,0,0,0.08);
         }
         /* Animation for profile image */
         .profile-img-animate {
@@ -888,11 +906,10 @@
         }
         @keyframes profileImgIn {
             to {
-                opacity: 1;
-                transform: scale(1) rotate(0deg);
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
             }
         }
-        /* Animation for name */
         .profile-name-animate {
             opacity: 0;
             transform: translateY(20px);
@@ -900,11 +917,10 @@
         }
         @keyframes profileNameIn {
             to {
-                opacity: 1;
-                transform: translateY(0);
+            opacity: 1;
+            transform: translateY(0);
             }
         }
-        /* Animation for title */
         .profile-title-animate {
             opacity: 0;
             transform: translateY(20px);
@@ -912,8 +928,8 @@
         }
         @keyframes profileTitleIn {
             to {
-                opacity: 1;
-                transform: translateY(0);
+            opacity: 1;
+            transform: translateY(0);
             }
         }
         /* Responsive adjustments */
@@ -922,13 +938,17 @@
             max-width: 900px;
             width: 95%;
             padding: 0;
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
         }
         .profile-header {
             padding: 40px 30px;
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            /* Remove border-radius here, handled by .profile-bg-effect */
         }
         .profile-img {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
         }
         .profile-name {
             font-size: 2.3rem;
@@ -938,67 +958,74 @@
         }
         @media (max-width: 700px) {
             .profile-container {
-                max-width: 98vw;
-                width: 100%;
-                margin-bottom: 20px;
+            max-width: 98vw;
+            width: 100%;
+            margin-bottom: 20px;
             }
             .profile-header {
-                padding: 28px 8vw 24px 8vw;
+            padding: 28px 8vw 24px 8vw;
             }
             .profile-img {
-                width: 110px;
-                height: 110px;
-                margin-bottom: 12px;
-                padding: 6px;
+            width: 130px;
+            height: 130px;
+            margin-bottom: 12px;
+            padding: 6px;
             }
             .profile-name {
-                font-size: 1.3rem;
+            font-size: 1.3rem;
             }
             .profile-title {
-                font-size: 0.98rem;
+            font-size: 0.98rem;
+            }
+            .profile-bg-effect {
+            border-bottom-left-radius: 18px;
+            border-bottom-right-radius: 18px;
             }
         }
         @media (max-width: 400px) {
             .profile-header {
-                padding: 16px 2vw 14px 2vw;
+            padding: 16px 2vw 14px 2vw;
             }
             .profile-img {
-                width: 80px;
-                height: 80px;
-                padding: 3px;
+            width: 90px;
+            height: 90px;
+            padding: 3px;
             }
             .profile-name {
-                font-size: 1.05rem;
+            font-size: 1.05rem;
             }
             .profile-title {
-                font-size: 0.8rem;
+            font-size: 0.8rem;
+            }
+            .profile-bg-effect {
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
             }
         }
-    </style>
-    <script>
+        </style>
+        <script>
         // Animate profile section on scroll into view (for repeat view)
         document.addEventListener('DOMContentLoaded', function () {
             function animateProfile() {
-                var el = document.querySelector('.profile-animate');
-                if (!el) return;
-                var rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 60) {
-                    el.style.animationPlayState = 'running';
-                    document.querySelectorAll('.profile-img-animate,.profile-name-animate,.profile-title-animate').forEach(function(child){
-                        child.style.animationPlayState = 'running';
-                    });
-                    window.removeEventListener('scroll', animateProfile);
-                }
+            var el = document.querySelector('.profile-animate');
+            if (!el) return;
+            var rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight - 60) {
+            el.style.animationPlayState = 'running';
+            document.querySelectorAll('.profile-img-animate,.profile-name-animate,.profile-title-animate').forEach(function(child){
+            child.style.animationPlayState = 'running';
+            });
+            window.removeEventListener('scroll', animateProfile);
+            }
             }
             // Set animation-play-state to paused initially
             document.querySelectorAll('.profile-animate,.profile-img-animate,.profile-name-animate,.profile-title-animate').forEach(function(el){
-                el.style.animationPlayState = 'paused';
+            el.style.animationPlayState = 'paused';
             });
             animateProfile();
             window.addEventListener('scroll', animateProfile);
         });
-    </script>
-        
+        </script>
         <!-- Profile Content -->
         <div class="profile-content">
             <!-- About Section -->

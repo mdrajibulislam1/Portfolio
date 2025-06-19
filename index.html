@@ -877,48 +877,64 @@
             <div id="about" class="content-section">
             <h2 class="section-title">About Me</h2>
             <div class="about-container" style="max-width: 800px; margin: 0 auto;">
-            <p class="about-text" style="
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-primary);
-            margin-bottom: 2rem;
-            padding: 2rem;
-            background: var(--bg-secondary);
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--card-border);
-            text-transform: capitalize;
-            ">
-            Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
-            <br><br>
-            A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
-            </p>
-            
-            <p class="about-text" style="
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--text-primary);
-            padding: 2rem;
-            background: var(--bg-secondary);
-            border-radius: 15px;
-            box-shadow: var(--shadow);
-            border: 1px solid var(--card-border);
-            transition: transform 0.3s ease;
-            text-transform: capitalize;
-            ">
-            <span style="font-size: 1.4rem; font-weight: 600; background: var(--accent-gradient); -webkit-background-clip: text; background-clip: text; color: transparent;">How I Work</span>
-            <br><br>
-            I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
-            </p>
+                <p class="about-text">
+                Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
+                <br><br>
+                A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
+                </p>
+                <p class="about-text">
+                <span class="about-highlight">How I Work</span>
+                <br><br>
+                I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
+                </p>
             </div>
-
             <style>
-            .about-text:hover {
+                .about-text {
+                font-size: 1.2rem;
+                line-height: 1.8;
+                color: var(--text-primary);
+                margin-bottom: 2rem;
+                padding: 2rem;
+                background: var(--bg-secondary);
+                border-radius: 15px;
+                box-shadow: var(--shadow);
+                border: 1px solid var(--card-border);
+                text-transform: capitalize;
+                transition: transform 0.3s ease;
+                word-break: break-word;
+                }
+                .about-text:hover {
                 transform: translateY(-5px);
-            }
+                }
+                .about-highlight {
+                font-size: 1.4rem;
+                font-weight: 600;
+                background: var(--accent-gradient);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                }
+                @media (max-width: 600px) {
+                .about-container {
+                    padding: 0 2vw;
+                }
+                .about-text {
+                    font-size: 1rem;
+                    padding: 1rem;
+                    margin-bottom: 1.2rem;
+                }
+                .about-highlight {
+                    font-size: 1.1rem;
+                }
+                }
+                @media (max-width: 400px) {
+                .about-text {
+                    font-size: 0.95rem;
+                    padding: 0.7rem;
+                }
+                }
             </style>
             </div>
-        </div>
         </div>
 
     <!-- Skills Section -->

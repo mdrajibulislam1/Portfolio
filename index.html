@@ -860,84 +860,84 @@
     </header>
 
     <!-- Profile Container -->
-    <div class="profile-container profile-animate"></div></div>
-        <!-- Profile Header -->
-        <div class="profile-header profile-bg-effect" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
-            <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="MD RAJIBUL ISLAM" class="profile-img profile-img-animate">
-            <h1 class="profile-name profile-name-animate">MD RAJIBUL ISLAM</h1>
-            <p class="profile-title profile-title-animate">Professional Video Editor • Motion Designer • AI Content Creator</p>
-        </div>
-        </div>
-        <style>
-        /* Animation for profile container */
-        .profile-animate {
-            opacity: 0;
-            transform: translateY(40px) scale(0.98);
-            animation: profileFadeIn 1s 0.1s forwards;
-        }
-        @keyframes profileFadeIn {
-            to {
-            opacity: 1;
-            transform: translateY(0) scale(1.03);
+        <div class="profile-container profile-animate"></div></div>
+            <!-- Profile Header -->
+            <div class="profile-header profile-bg-effect" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
+                <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="MD RAJIBUL ISLAM" class="profile-img profile-img-animate">
+                <h1 class="profile-name profile-name-animate">MD RAJIBUL ISLAM</h1>
+                <p class="profile-title profile-title-animate">Professional Video Editor • Motion Designer • AI Content Creator</p>
+            </div>
+            </div>
+            <style>
+            /* Animation for profile container */
+            .profile-animate {
+                opacity: 0;
+                transform: translateY(40px) scale(0.98);
+                animation: profileFadeIn 1s 0.1s forwards;
             }
-        }
-        /* Pop-up effect for background section */
-        .profile-bg-effect {
-            position: relative;
-            box-shadow: 0 8px 32px rgba(106,17,203,0.12), 0 2px 8px rgba(0,0,0,0.05);
-            border-radius: 0 0 32px 32px;
-            /* Only bottom corners rounded */
-            border-top-left-radius: 0;
-            border-top-right-radius: 0;
-            border-bottom-left-radius: 32px;
-            border-bottom-right-radius: 32px;
-            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
-            z-index: 1;
-            transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
-        }
-        .profile-bg-effect:hover {
-            transform: translateY(-6px) scale(1.04);
-            box-shadow: 0 16px 48px rgba(106,17,203,0.18), 0 4px 16px rgba(0,0,0,0.08);
-        }
-        /* Animation for profile image */
-        .profile-img-animate {
-            opacity: 0;
-            transform: scale(0.85) rotate(-6deg);
-            animation: profileImgIn 0.9s 0.3s forwards;
-        }
-        @keyframes profileImgIn {
-            to {
-            opacity: 1;
-            transform: scale(1) rotate(0deg);
+            @keyframes profileFadeIn {
+                to {
+                opacity: 1;
+                transform: translateY(0) scale(1.03);
+                }
             }
-        }
-        .profile-name-animate {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: profileNameIn 0.7s 0.6s forwards;
-        }
-        @keyframes profileNameIn {
-            to {
-            opacity: 1;
-            transform: translateY(0);
+            /* Remove pop-up effect for background section */
+            .profile-bg-effect {
+                position: relative;
+                /* box-shadow and transform removed */
+                border-radius: 0 0 32px 32px;
+                /* Only bottom corners rounded */
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 32px;
+                border-bottom-right-radius: 32px;
+                background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+                z-index: 1;
+                /* transition removed */
             }
-        }
-        .profile-title-animate {
-            opacity: 0;
-            transform: translateY(20px);
-            animation: profileTitleIn 0.7s 0.8s forwards;
-        }
-        @keyframes profileTitleIn {
-            to {
-            opacity: 1;
-            transform: translateY(0);
+            /* .profile-bg-effect:hover removed */
+            /* Animation for profile image */
+            .profile-img-animate {
+                opacity: 0;
+                transform: scale(0.85) rotate(-6deg);
+                animation: profileImgIn 0.9s 0.3s forwards;
             }
-        }
-        /* Responsive adjustments */
-        .profile-container {
-            margin: 0 auto 30px;
-            max-width: 900px;
-            width: 95%;
+            @keyframes profileImgIn {
+                to {
+                opacity: 1;
+                transform: scale(1) rotate(0deg);
+                }
+            }
+            .profile-name-animate {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: profileNameIn 0.7s 0.6s forwards;
+            }
+            @keyframes profileNameIn {
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+            }
+            .profile-title-animate {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: profileTitleIn 0.7s 0.8s forwards;
+            }
+            @keyframes profileTitleIn {
+                to {
+                opacity: 1;
+                transform: translateY(0);
+                }
+            }
+            /* Responsive adjustments */
+            .profile-container {
+                margin: 0 auto 30px;
+                max-width: 900px;
+                width: 95%;
+                padding: 0;
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0,0,0,0.1);
             padding: 0;
             transform: translateY(-10px);
             box-shadow: 0 8px 20px rgba(0,0,0,0.1);
@@ -1027,112 +1027,253 @@
             window.addEventListener('scroll', animateProfile);
         });
         </script>
-        <!-- Profile Content -->
-        <div class="profile-content">
-            <!-- About Section -->
-            <div id="about" class="content-section">
-            <h2 class="section-title about-animate">About Me</h2>
-            <div class="about-container" style="max-width: 800px; margin: 0 auto;">
-                <p class="about-text about-animate" style="animation-delay: 0.1s;">
-                Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
-                <br><br>
-                A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
-                </p>
-                <p class="about-text about-animate" style="animation-delay: 0.3s;">
-                <span class="about-highlight">How I Work</span>
-                <br><br>
-                I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
-                </p>
-            </div>
-            <style>
-                .about-text {
-                font-size: 1.2rem;
-                line-height: 1.8;
-                color: var(--text-primary);
-                margin-bottom: 2rem;
-                padding: 2rem;
-                background: var(--bg-secondary);
-                border-radius: 15px;
-                box-shadow: var(--shadow);
-                border: 1px solid var(--card-border);
-                text-transform: capitalize;
-                transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
-                word-break: break-word;
-                opacity: 0;
-                transform: translateY(40px) scale(0.98);
-                animation: aboutFadeIn 0.8s forwards;
-                }
-                .about-text:hover {
-                transform: translateY(-5px) scale(1.01);
-                box-shadow: 0 12px 32px rgba(106, 17, 203, 0.10);
-                }
-                .about-highlight {
-                font-size: 1.4rem;
-                font-weight: 600;
-                background: var(--accent-gradient);
-                -webkit-background-clip: text;
-                background-clip: text;
-                color: transparent;
-                letter-spacing: 0.5px;
-                display: inline-block;
-                animation: highlightPulse 1.8s infinite alternate;
-                }
-                @keyframes aboutFadeIn {
-                to {
-                    opacity: 1;
-                    transform: translateY(0) scale(1);
-                }
-                }
-                @keyframes highlightPulse {
-                0% { filter: brightness(1); }
-                100% { filter: brightness(1.25) drop-shadow(0 0 8px #6a11cb44); }
-                }
-                .about-animate {
-                opacity: 0;
-                animation: aboutFadeIn 0.8s forwards;
-                }
-                .about-animate:nth-child(1) { animation-delay: 0.1s; }
-                .about-animate:nth-child(2) { animation-delay: 0.2s; }
-                .about-animate:nth-child(3) { animation-delay: 0.3s; }
-                @media (max-width: 600px) {
-                .about-container {
-                    padding: 0 2vw;
-                }
-                .about-text {
-                    font-size: 1rem;
-                    padding: 1rem;
-                    margin-bottom: 1.2rem;
-                }
-                .about-highlight {
-                    font-size: 1.1rem;
-                }
-                }
-                @media (max-width: 400px) {
-                .about-text {
-                    font-size: 0.95rem;
-                    padding: 0.7rem;
-                }
-                }
-            </style>
-            </div>
-        </div>
-        <script>
-            // Animate About section on scroll into view
-            document.addEventListener('DOMContentLoaded', function () {
-            const aboutEls = document.querySelectorAll('.about-animate');
-            function animateAbout() {
-                aboutEls.forEach(el => {
-                const rect = el.getBoundingClientRect();
-                if (rect.top < window.innerHeight - 60) {
-                    el.style.opacity = 1;
-                    el.style.animationPlayState = 'running';
-                }
-                });
-            }
-            animateAbout();
-            window.addEventListener('scroll', animateAbout);
-            });
-        </script>
+
+
+                                    <div class="profile-content">
+                                        <!-- About Section -->
+                                        <div id="about" class="content-section">
+                                        <h2 class="section-title about-animate">About Me</h2>
+                                        <div class="about-slider-container">
+                                            <!-- Replace slider arrows with dots below the slider -->
+                                            <div class="about-slider-track">
+                                            <!-- Slide 1 -->
+                                            <div class="about-slide">
+                                                <div class="about-container" style="max-width: 800px; margin: 0 auto;">
+                                                <p class="about-text about-animate" style="animation-delay: 0.1s;">
+                                                    Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
+                                                    <br><br>
+                                                    A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
+                                                </p>
+                                                </div>
+                                            </div>
+                                            <!-- Slide 2 -->
+                                            <div class="about-slide">
+                                                <div class="about-container" style="max-width: 800px; margin: 0 auto;">
+                                                <p class="about-text about-animate" style="animation-delay: 0.3s;">
+                                                    <span class="about-highlight">How I Work</span>
+                                                    <br><br>
+                                                    I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
+                                                </p>
+                                                </div>
+                                            </div>
+                                            </div>
+                                            <!-- Dots navigation -->
+                                            <div class="about-slider-dots" style="display: flex; justify-content: center; gap: 10px; margin-top: 18px;">
+                                                <button class="about-dot active" aria-label="Go to slide 1" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--accent-gradient); opacity: 1; cursor: pointer; transition: opacity 0.2s;"></button>
+                                                <button class="about-dot" aria-label="Go to slide 2" style="width: 12px; height: 12px; border-radius: 50%; border: none; background: var(--accent-gradient); opacity: 0.4; cursor: pointer; transition: opacity 0.2s;"></button>
+                                            </div>
+                                        </div>
+                                        <style>
+                                            .about-slider-container {
+                                            position: relative;
+                                            max-width: 850px;
+                                            margin: 0 auto 2rem auto;
+                                            overflow: hidden;
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            justify-content: center;
+                                            }
+                                            .about-slider-track {
+                                            display: flex;
+                                            transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+                                            will-change: transform;
+                                            width: 100%;
+                                            }
+                                            .about-slide {
+                                            min-width: 100%;
+                                            box-sizing: border-box;
+                                            padding: 0 10px;
+                                            display: flex;
+                                            align-items: center;
+                                            justify-content: center;
+                                            }
+                                            .about-slider-dots {
+                                            margin-top: 18px;
+                                            }
+                                            .about-dot {
+                                            width: 12px;
+                                            height: 12px;
+                                            border-radius: 50%;
+                                            border: none;
+                                            background: var(--accent-gradient);
+                                            opacity: 0.4;
+                                            cursor: pointer;
+                                            transition: opacity 0.2s;
+                                            }
+                                            .about-dot.active {
+                                            opacity: 1;
+                                            box-shadow: 0 0 0 3px #6a11cb33;
+                                            }
+                                            @media (max-width: 600px) {
+                                            .about-slider-container {
+                                                max-width: 100vw;
+                                            }
+                                            .about-dot {
+                                                width: 9px;
+                                                height: 9px;
+                                            }
+                                            }
+                                        </style>
+                                        <style>
+                                            .about-text {
+                                            font-size: 1.2rem;
+                                            line-height: 1.8;
+                                            color: var(--text-primary);
+                                            margin-bottom: 2rem;
+                                            padding: 2rem;
+                                            background: var(--bg-secondary);
+                                            border-radius: 15px;
+                                            box-shadow: var(--shadow);
+                                            border: 1px solid var(--card-border);
+                                            text-transform: capitalize;
+                                            transition: transform 0.3s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+                                            word-break: break-word;
+                                            opacity: 0;
+                                            transform: translateY(40px) scale(0.98);
+                                            animation: aboutFadeIn 0.8s forwards;
+                                            }
+                                            .about-text:hover {
+                                            transform: translateY(-5px) scale(1.01);
+                                            box-shadow: 0 12px 32px rgba(106, 17, 203, 0.10);
+                                            }
+                                            .about-highlight {
+                                            font-size: 1.4rem;
+                                            font-weight: 600;
+                                            background: var(--accent-gradient);
+                                            -webkit-background-clip: text;
+                                            background-clip: text;
+                                            color: transparent;
+                                            letter-spacing: 0.5px;
+                                            display: inline-block;
+                                            animation: highlightPulse 1.8s infinite alternate;
+                                            }
+                                            @keyframes aboutFadeIn {
+                                            to {
+                                                opacity: 1;
+                                                transform: translateY(0) scale(1);
+                                            }
+                                            }
+                                            @keyframes highlightPulse {
+                                            0% { filter: brightness(1); }
+                                            100% { filter: brightness(1.25) drop-shadow(0 0 8px #6a11cb44); }
+                                            }
+                                            .about-animate {
+                                            opacity: 0;
+                                            animation: aboutFadeIn 0.8s forwards;
+                                            }
+                                            .about-animate:nth-child(1) { animation-delay: 0.1s; }
+                                            .about-animate:nth-child(2) { animation-delay: 0.2s; }
+                                            .about-animate:nth-child(3) { animation-delay: 0.3s; }
+                                            @media (max-width: 600px) {
+                                            .about-container {
+                                                padding: 0 2vw;
+                                            }
+                                            .about-text {
+                                                font-size: 1rem;
+                                                padding: 1rem;
+                                                margin-bottom: 1.2rem;
+                                            }
+                                            .about-highlight {
+                                                font-size: 1.1rem;
+                                            }
+                                            }
+                                            @media (max-width: 400px) {
+                                            .about-text {
+                                                font-size: 0.95rem;
+                                                padding: 0.7rem;
+                                            }
+                                            }
+                                        </style>
+                                        </div>
+                                    </div>
+                                    <script>
+                                        // Animate About section on scroll into view
+                                        document.addEventListener('DOMContentLoaded', function () {
+                                        const aboutEls = document.querySelectorAll('.about-animate');
+                                        function animateAbout() {
+                                            aboutEls.forEach(el => {
+                                            const rect = el.getBoundingClientRect();
+                                            if (rect.top < window.innerHeight - 60) {
+                                                el.style.opacity = 1;
+                                                el.style.animationPlayState = 'running';
+                                            }
+                                            });
+                                        }
+                                        animateAbout();
+                                        window.addEventListener('scroll', animateAbout);
+
+                                        // About slider logic
+                                        const track = document.querySelector('.about-slider-track');
+                                        const slides = document.querySelectorAll('.about-slide');
+                                        const dots = document.querySelectorAll('.about-dot');
+                                        let aboutIndex = 0;
+                                        let aboutInterval = null;
+
+                                        function updateAboutSlider() {
+                                            track.style.transform = `translateX(-${aboutIndex * 100}%)`;
+                                            dots.forEach((dot, i) => {
+                                                dot.classList.toggle('active', i === aboutIndex);
+                                            });
+                                        }
+
+                                        function goToAboutSlide(i) {
+                                            aboutIndex = i;
+                                            updateAboutSlider();
+                                            resetAboutAuto();
+                                        }
+
+                                        dots.forEach((dot, i) => {
+                                            dot.addEventListener('click', () => {
+                                                goToAboutSlide(i);
+                                            });
+                                        });
+
+                                        // Swipe support for mobile
+                                        let startX = 0;
+                                        let isDragging = false;
+
+                                        track.addEventListener('touchstart', function(e) {
+                                            isDragging = true;
+                                            startX = e.touches[0].clientX;
+                                        });
+
+                                        track.addEventListener('touchmove', function(e) {
+                                            if (!isDragging) return;
+                                            // Optionally, you can add a drag effect here
+                                        });
+
+                                        track.addEventListener('touchend', function(e) {
+                                            isDragging = false;
+                                            let endX = e.changedTouches[0].clientX;
+                                            let diff = endX - startX;
+                                            if (Math.abs(diff) > 50) {
+                                            if (diff < 0) {
+                                                // swipe left
+                                                aboutIndex = (aboutIndex + 1) % slides.length;
+                                            } else {
+                                                // swipe right
+                                                aboutIndex = (aboutIndex - 1 + slides.length) % slides.length;
+                                            }
+                                            updateAboutSlider();
+                                            resetAboutAuto();
+                                            }
+                                        });
+
+                                        // Automatic slide
+                                        function autoAboutSlider() {
+                                            aboutIndex = (aboutIndex + 1) % slides.length;
+                                            updateAboutSlider();
+                                        }
+                                        function resetAboutAuto() {
+                                            if (aboutInterval) clearInterval(aboutInterval);
+                                            aboutInterval = setInterval(autoAboutSlider, 5000);
+                                        }
+                                        updateAboutSlider();
+                                        resetAboutAuto();
+                                        });
+                                    </script>
+
 
     <!-- Skills Section -->
     <section id="skills">
@@ -1310,11 +1451,11 @@
             <!-- Video 5 -->
             <div class="video-card card" data-category="tutorial">
                 <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/3GqIqTN-S4k?si=LBtA5vxLb1lnRsfL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Talking Head x Motion Graffiti – A Bold New Style</h3>
-                    <p> Edit in Premiere Pro</p>
+                    <h3>Video Editing Masterclass</h3>
+                    <p>Advanced Techniques Explained</p>
                 </div>
             </div>
             
@@ -1460,6 +1601,129 @@
     }
 }
 </style></a>
+
+
+<!-- YouTube Shorts Section -->
+<section id="shorts">
+    <div class="container">
+        <h2 class="section-title">YouTube Shorts</h2>
+        <div class="video-grid">
+            <!-- Short 1 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;"> <!-- 9:16 aspect ratio -->
+                    <iframe src="https://www.youtube.com/embed/jBwFo-V0CX4" title="YouTube Short 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Live Coding</h3>
+                    <p>Quick coding session</p>
+                </div>
+            </div>
+            <!-- Short 2 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/3tmd-ClpJxA" title="YouTube Short 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Animation Fun</h3>
+                    <p>Motion graphics in 30s</p>
+                </div>
+            </div>
+            <!-- Short 3 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="YouTube Short 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Quick Edit</h3>
+                    <p>Fast video transformation</p>
+                </div>
+            </div>
+            <!-- Short 4 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube Short 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Trending Edit</h3>
+                    <p>Popular style in 15s</p>
+                </div>
+            </div>
+            <!-- Short 5 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/LsoLEjrDogU" title="YouTube Short 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: AI Magic</h3>
+                    <p>AI-powered quick tip</p>
+                </div>
+            </div>
+            <!-- Short 6 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="YouTube Short 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Fast Montage</h3>
+                    <p>Quick scene cuts</p>
+                </div>
+            </div>
+            <!-- Short 7 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/OPf0YbXqDm0" title="YouTube Short 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Color Grading</h3>
+                    <p>Before & After in 20s</p>
+                </div>
+            </div>
+            <!-- Short 8 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/60ItHLz5WEA" title="YouTube Short 8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Quick Tips</h3>
+                    <p>Editing hack in 10s</p>
+                </div>
+            </div>
+            <!-- Short 9 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube Short 9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Music Sync</h3>
+                    <p>Editing to the beat</p>
+                </div>
+            </div>
+            <!-- Short 10 -->
+            <div class="video-card card">
+                <div class="video-container" style="padding-bottom: 177.78%;">
+                    <iframe src="https://www.youtube.com/embed/fRh_vgS2dFE" title="YouTube Short 10" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                <div class="video-info">
+                    <h3>Short: Fast Transitions</h3>
+                    <p>Creative cuts in 12s</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="container" style="text-align: center; margin: 30px auto; width: 100%; max-width: 100%;">
+    <a href="https://www.youtube.com/@abdurlabib1" target="_blank" class="btn"
+        style="display: inline-block;
+               padding: 15px 40px;
+               font-size: 1.2em;
+               width: auto;
+               border-radius: 50px;
+               animation: pulse 2s infinite;
+               text-align: center;">
+        <i class="fab fa-youtube" style="margin-right: 10px;"></i> See More
+    </a>
+</div>
     <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">

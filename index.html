@@ -158,6 +158,11 @@
         .logo span {
             color: #6a11cb;
         }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+        }
         
         .nav-links {
             display: flex;
@@ -188,14 +193,32 @@
             cursor: pointer;
         }
         
-        /* Theme Toggle Button */
+        /* Language & Theme Toggles */
+        .language-toggle {
+            background: none;
+            border: 1px solid var(--card-border);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-left: 15px;
+            padding: 8px 12px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .language-toggle:hover {
+            background: rgba(106, 17, 203, 0.1);
+            border-color: rgba(106, 17, 203, 0.3);
+        }
+
         .theme-toggle {
             background: none;
             border: none;
             color: var(--text-heading);
             font-size: 1.25rem;
             cursor: pointer;
-            margin-left: 20px;
+            margin-left: 10px;
             width: 40px;
             height: 40px;
             display: flex;
@@ -836,7 +859,18 @@
         <div class="container">
             <nav>
                 <a href="#" class="logo">MD RAJIBUL <span>ISLAM</span></a>
+                <ul class="nav-links">
+                    <li><a href="#" data-translate-key="navHome">Home</a></li>
+                    <li><a href="#about" data-translate-key="navAbout">About</a></li>
+                    <li><a href="#skills" data-translate-key="navSkills">Skills</a></li>
+                    <li><a href="#services" data-translate-key="navServices">Services</a></li>
+                    <li><a href="#gallery" data-translate-key="navGallery">Gallery</a></li>
+                    <li><a href="#testimonials" data-translate-key="navTestimonials">Testimonials</a></li>
+                    <li><a href="#faq" data-translate-key="navFaq">FAQ</a></li>
+                    <li><a href="#contact" data-translate-key="navContact">Contact</a></li>
+                </ul>
                 <div class="nav-right">
+                    <button class="language-toggle" id="language-toggle" aria-label="Toggle Language">বাংলা</button>
                     <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
                         <i class="fas fa-moon"></i>
                     </button>
@@ -844,17 +878,6 @@
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
-                <ul class="nav-links">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
             </nav>
         </div>
     </header>
@@ -864,8 +887,8 @@
             <!-- Profile Header -->
             <div class="profile-header profile-bg-effect" style="background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);">
                 <img src="https://i.ibb.co/mCSc7r2d/Picsart-24-04-28-22-47-32-422.png" alt="MD RAJIBUL ISLAM" class="profile-img profile-img-animate">
-                <h1 class="profile-name profile-name-animate">MD RAJIBUL ISLAM</h1>
-                <p class="profile-title profile-title-animate">Professional Video Editor • Motion Designer • AI Content Creator</p>
+                <h1 class="profile-name profile-name-animate" data-translate-key="profileName">MD RAJIBUL ISLAM</h1>
+                <p class="profile-title profile-title-animate" data-translate-key="profileTitle">Professional Video Editor • Motion Designer • AI Content Creator</p>
             </div>
             </div>
             <style>
@@ -1032,14 +1055,14 @@
                                     <div class="profile-content">
                                         <!-- About Section -->
                                         <div id="about" class="content-section">
-                                        <h2 class="section-title about-animate">About Me</h2>
+                                        <h2 class="section-title about-animate" data-translate-key="aboutTitle">About Me</h2>
                                         <div class="about-slider-container">
                                             <!-- Replace slider arrows with dots below the slider -->
                                             <div class="about-slider-track">
                                             <!-- Slide 1 -->
                                             <div class="about-slide">
                                                 <div class="about-container" style="max-width: 800px; margin: 0 auto;">
-                                                <p class="about-text about-animate" style="animation-delay: 0.1s;">
+                                                <p class="about-text about-animate" style="animation-delay: 0.1s;" data-translate-key="aboutText1">
                                                     Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span>
                                                     <br><br>
                                                     A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.
@@ -1049,7 +1072,7 @@
                                             <!-- Slide 2 -->
                                             <div class="about-slide">
                                                 <div class="about-container" style="max-width: 800px; margin: 0 auto;">
-                                                <p class="about-text about-animate" style="animation-delay: 0.3s;">
+                                                <p class="about-text about-animate" style="animation-delay: 0.3s;" data-translate-key="aboutText2">
                                                     <span class="about-highlight">How I Work</span>
                                                     <br><br>
                                                     I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.
@@ -1278,35 +1301,35 @@
     <!-- Skills Section -->
     <section id="skills">
         <div class="container">
-            <h2 class="section-title">My Skills & Tools</h2>
+            <h2 class="section-title" data-translate-key="skillsTitle">My Skills & Tools</h2>
             <div class="skills-grid">
                 <div class="skill-card card">
                     <div class="skill-icon">
                         <i class="fas fa-film"></i>
                     </div>
-                    <h3>Video Editing</h3>
-                    <p>Adobe Premiere Pro,DaVinci Resolve</p>
+                    <h3 data-translate-key="skill1Title">Video Editing</h3>
+                    <p data-translate-key="skill1Tools">Adobe Premiere Pro,DaVinci Resolve</p>
                 </div>
                 <div class="skill-card card">
                     <div class="skill-icon">
                         <i class="fas fa-magic"></i>
                     </div>
-                    <h3>Motion Graphics</h3>
-                    <p>After Effects, Blender,</p>
+                    <h3 data-translate-key="skill2Title">Motion Graphics</h3>
+                    <p data-translate-key="skill2Tools">After Effects, Blender,</p>
                 </div>
                 <div class="skill-card card">
                     <div class="skill-icon">
                         <i class="fas fa-image"></i>
                     </div>
-                    <h3>Graphic Design</h3>
-                    <p>Photoshop, Illustrator, Canva</p>
+                    <h3 data-translate-key="skill3Title">Graphic Design</h3>
+                    <p data-translate-key="skill3Tools">Photoshop, Illustrator, Canva</p>
                 </div>
                 <div class="skill-card card">
                     <div class="skill-icon">
                         <i class="fas fa-robot"></i>
                     </div>
-                    <h3>AI Tools</h3>
-                    <p>ChatGPT, Midjourney, Adobe Sensei, AI Voiceovers</p>
+                    <h3 data-translate-key="skill4Title">AI Tools</h3>
+                    <p data-translate-key="skill4Tools">ChatGPT, Midjourney, Adobe Sensei, AI Voiceovers</p>
                 </div>
             </div>
         </div>
@@ -1315,43 +1338,43 @@
     <!-- Services Section -->
     <section id="services">
         <div class="container">
-            <h2 class="section-title">My Services</h2>
+            <h2 class="section-title" data-translate-key="servicesTitle">My Services</h2>
             <div class="services-tabs">
-                <button class="tab-btn active" data-tab="video-services">Video Services</button>
-                <button class="tab-btn" data-tab="ai-services">AI Services</button>
+                <button class="tab-btn active" data-tab="video-services" data-translate-key="servicesTab1">Video Services</button>
+                <button class="tab-btn" data-tab="ai-services" data-translate-key="servicesTab2">AI Services</button>
             </div>
             
             <div id="video-services" class="tab-content active">
                 <div class="services-grid">
                     <div class="service-card card">
                         <i class="fab fa-youtube"></i>
-                        <h3>YouTube Editing</h3>
-                        <p>Engaging edits for vlogs, tutorials, reviews, and more with optimized pacing, transitions, and effects.</p>
+                        <h3 data-translate-key="service1Title">YouTube Editing</h3>
+                        <p data-translate-key="service1Desc">Engaging edits for vlogs, tutorials, reviews, and more with optimized pacing, transitions, and effects.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-video"></i>
-                        <h3>Documentary Edits</h3>
-                        <p>Thoughtful storytelling with proper narrative flow, b-roll integration, and emotional impact.</p>
+                        <h3 data-translate-key="service2Title">Documentary Edits</h3>
+                        <p data-translate-key="service2Desc">Thoughtful storytelling with proper narrative flow, b-roll integration, and emotional impact.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-user-tie"></i>
-                        <h3>Talking-head Videos</h3>
-                        <p>Clean edits for interviews, presentations, and educational content with professional polish.</p>
+                        <h3 data-translate-key="service3Title">Talking-head Videos</h3>
+                        <p data-translate-key="service3Desc">Clean edits for interviews, presentations, and educational content with professional polish.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-camera"></i>
-                        <h3>Vlogs</h3>
-                        <p>Dynamic edits that maintain authenticity while enhancing entertainment value.</p>
+                        <h3 data-translate-key="service4Title">Vlogs</h3>
+                        <p data-translate-key="service4Desc">Dynamic edits that maintain authenticity while enhancing entertainment value.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-shopping-cart"></i>
-                        <h3>Product Promos</h3>
-                        <p>Highlight features and benefits with compelling visuals and persuasive pacing.</p>
+                        <h3 data-translate-key="service5Title">Product Promos</h3>
+                        <p data-translate-key="service5Desc">Highlight features and benefits with compelling visuals and persuasive pacing.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-briefcase"></i>
-                        <h3>Corporate Edits</h3>
-                        <p>Professional videos for businesses, training, and internal communications.</p>
+                        <h3 data-translate-key="service6Title">Corporate Edits</h3>
+                        <p data-translate-key="service6Desc">Professional videos for businesses, training, and internal communications.</p>
                     </div>
                 </div>
             </div>
@@ -1360,33 +1383,33 @@
                 <div class="services-grid">
                     <div class="service-card card">
                         <i class="fas fa-keyboard"></i>
-                        <h3>Prompt Writing</h3>
-                        <p>Expertly crafted prompts for AI tools to generate exactly what you need.</p>
+                        <h3 data-translate-key="service7Title">Prompt Writing</h3>
+                        <p data-translate-key="service7Desc">Expertly crafted prompts for AI tools to generate exactly what you need.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-scroll"></i>
-                        <h3>Script Writing</h3>
-                        <p>AI-assisted script writing that maintains human authenticity and engagement.</p>
+                        <h3 data-translate-key="service8Title">Script Writing</h3>
+                        <p data-translate-key="service8Desc">AI-assisted script writing that maintains human authenticity and engagement.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-photo-film"></i>
-                        <h3>AI Video/Image Generation</h3>
-                        <p>Create custom visuals and video elements using the latest AI tools.</p>
+                        <h3 data-translate-key="service9Title">AI Video/Image Generation</h3>
+                        <p data-translate-key="service9Desc">Create custom visuals and video elements using the latest AI tools.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-microphone"></i>
-                        <h3>AI Voiceovers</h3>
-                        <p>Natural-sounding male and female voices in multiple languages and accents.</p>
+                        <h3 data-translate-key="service10Title">AI Voiceovers</h3>
+                        <p data-translate-key="service10Desc">Natural-sounding male and female voices in multiple languages and accents.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-paintbrush"></i>
-                        <h3>AI Image Editing</h3>
-                        <p>Enhance, restore, or transform images with AI-powered tools.</p>
+                        <h3 data-translate-key="service11Title">AI Image Editing</h3>
+                        <p data-translate-key="service11Desc">Enhance, restore, or transform images with AI-powered tools.</p>
                     </div>
                     <div class="service-card card">
                         <i class="fas fa-thumbs-up"></i>
-                        <h3>AI Thumbnail Design</h3>
-                        <p>Data-driven thumbnail designs optimized for maximum click-through rates.</p>
+                        <h3 data-translate-key="service12Title">AI Thumbnail Design</h3>
+                        <p data-translate-key="service12Desc">Data-driven thumbnail designs optimized for maximum click-through rates.</p>
                     </div>
                 </div>
             </div>
@@ -1398,7 +1421,7 @@
   <!-- Video Gallery Section -->
 <section id="gallery">
     <div class="container">
-        <h2 class="section-title">YouTube Video Gallery</h2>
+        <h2 class="section-title" data-translate-key="galleryTitle">YouTube Video Gallery</h2>
         
     
         </div>
@@ -1410,8 +1433,8 @@
                     <iframe src="https://www.youtube.com/embed/ysMB3GjVpw8?si=FaKHaIfmAn1XGIXW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Documentary & Motion graphic</h3>
-                    <p>Premiere Pro | After Effects & AI</p>
+                    <h3 data-translate-key="video1Title">Documentary & Motion graphic</h3>
+                    <p data-translate-key="video1Desc">Premiere Pro | After Effects & AI</p>
                 </div>
             </div>
             
@@ -1421,8 +1444,8 @@
                     <iframe src="https://www.youtube.com/embed/evWCEZ_CH2I?si=VHDWAO0naanYw_qv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Animation & Motion Graphic</h3>
-                    <p>Detailed Analysis with B-Roll</p>
+                    <h3 data-translate-key="video2Title">Animation & Motion Graphic</h3>
+                    <p data-translate-key="video2Desc">Detailed Analysis with B-Roll</p>
                 </div>
             </div>
             
@@ -1432,8 +1455,8 @@
                     <iframe src="https://www.youtube.com/embed/IMNnmTH2ans?si=vg1zY6F6oingtbXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>YouTube video Editing</h3>
-                    <p>Animation & Motion Graphic</p>
+                    <h3 data-translate-key="video3Title">YouTube video Editing</h3>
+                    <p data-translate-key="video3Desc">Animation & Motion Graphic</p>
                 </div>
             </div>
             
@@ -1443,10 +1466,10 @@
                     <iframe src="https://www.youtube.com/embed/6chk1Hy_3dY?si=gBoxFLCMuO3zqB4z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3> Talking Head NEWS Video Editing</h3>
-                    <p> click here to see more information</p>
+                    <h3 data-translate-key="video4Title"> Talking Head NEWS Video Editing</h3>
+                    <p data-translate-key="video4Desc"> click here to see more information</p>
                 </div>
-                 <button class="testimonial-btn" style="position: absolute; bottom: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://drive.google.com/drive/folders/1pW277LyWpIQlhgDr5ztKtxDpywQ8Sb06?usp=sharing', '_blank')">Click</button>
+                 <button class="testimonial-btn" style="position: absolute; bottom: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://drive.google.com/drive/folders/1pW277LyWpIQlhgDr5ztKtxDpywQ8Sb06?usp=sharing', '_blank')" data-translate-key="clickBtn">Click</button>
             </div>
             <!-- Video 5 -->
             <div class="video-card card" data-category="tutorial">
@@ -1454,8 +1477,8 @@
                     <iframe src="https://www.youtube.com/embed/LNxspsG2fdg?si=1SJ6kbIpCwFRx50B" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Talking Head NEWS Video Editing </h3>
-                    <p>From audio to color, every element in this video was custom-built — finalized with the Lord Third layer,</p>
+                    <h3 data-translate-key="video5Title">Talking Head NEWS Video Editing </h3>
+                    <p data-translate-key="video5Desc">From audio to color, every element in this video was custom-built — finalized with the Lord Third layer,</p>
                 </div>
             </div>
             
@@ -1465,109 +1488,11 @@
                     <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Cultural Documentary</h3>
-                    <p>Local Traditions Showcase</p>
+                    <h3 data-translate-key="video6Title">Cultural Documentary</h3>
+                    <p data-translate-key="video6Desc">Local Traditions Showcase</p>
                 </div>
             </div>
             
-            <!-- Video 7 -->
-            <div class="video-card card" data-category="corporate">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Company Profile Video</h3>
-                    <p>Corporate Identity Presentation</p>
-                </div>
-            </div>
-            
-            <!-- Video 8 -->
-            <div class="video-card card" data-category="tutorial">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Motion Graphics Tutorial</h3>
-                    <p>After Effects Techniques</p>
-                </div>
-            </div>
-            
-            <!-- Video 9 -->
-            <div class="video-card card" data-category="travel">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Adventure Travel Series</h3>
-                    <p>Extreme Sports Compilation</p>
-                </div>
-            </div>
-            
-            <!-- Video 10 -->
-            <div class="video-card card" data-category="corporate">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Product Launch Event</h3>
-                    <p>Corporate Event Coverage</p>
-                </div>
-            </div>
-            
-            <!-- Video 11 -->
-            <div class="video-card card" data-category="tutorial">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>AI Video Editing Guide</h3>
-                    <p>Cutting-Edge Techniques</p>
-                </div>
-            </div>
-            
- <!-- Video 12 -->
-            <div class="video-card card" data-category="tutorial">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>AI Video Editing Guide</h3>
-                    <p>Cutting-Edge Techniques</p>
-                </div>
-            </div>
-
-             <!-- Video 13 -->
-            <div class="video-card card" data-category="tutorial">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>AI Video Editing Guide</h3>
-                    <p>Cutting-Edge Techniques</p>
-                </div>
-            </div>
-
-             <!-- Video 14 -->
-            <div class="video-card card" data-category="tutorial">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>AI Video Editing Guide</h3>
-                    <p>Cutting-Edge Techniques</p>
-                </div>
-            </div>
-
-            <!-- Video 15 -->
-            <div class="video-card card" data-category="travel">
-                <div class="video-container">
-                    <iframe src="0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Cityscape Time-Lapse</h3>
-                    <p>Urban Photography Montage</p>
-                </div>
-            </div>
         </div>
     </div>
 </section>
@@ -1580,7 +1505,7 @@
                width: auto; 
                border-radius: 50px;
                animation: pulse 2s infinite;
-               text-align: center;">
+               text-align: center;" data-translate-key="seeMoreVideosBtn">
         <i class="fab fa-youtube" style="margin-right: 10px;"></i> See More Videos
     </a>
 </div>
@@ -1606,7 +1531,7 @@
 <!-- YouTube Shorts Section -->
 <section id="shorts">
     <div class="container">
-        <h2 class="section-title">YouTube Shorts</h2>
+        <h2 class="section-title" data-translate-key="shortsTitle">YouTube Shorts</h2>
         <div class="video-grid">
             <!-- Short 1 -->
             <div class="video-card card">
@@ -1614,8 +1539,8 @@
                     <iframe src="https://www.youtube.com/embed/5pS_nL5vINQ" title="YouTube Short 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Wellcore Creatine By Rive Sup's</h3>
-                    <p> Edit By MD RAJIBUL ISLAM </p>
+                    <h3 data-translate-key="short1Title">Wellcore Creatine By Rive Sup's</h3>
+                    <p data-translate-key="short1Desc"> Edit By MD RAJIBUL ISLAM </p>
                 </div>
             </div>
             <!-- Short 2 -->
@@ -1624,8 +1549,8 @@
                     <iframe src="https://www.youtube.com/embed/ST1ZcP7Bz3s" title="YouTube Short 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Short: Animation Fun</h3>
-                    <p>Motion graphics in 30s</p>
+                    <h3 data-translate-key="short2Title">Short: Animation Fun</h3>
+                    <p data-translate-key="short2Desc">Motion graphics in 30s</p>
                 </div>
             </div>
             <!-- Short 3 -->
@@ -1634,70 +1559,12 @@
                     <iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" title="YouTube Short 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="video-info">
-                    <h3>Short: Quick Edit</h3>
-                    <p>Fast video transformation</p>
+                    <h3 data-translate-key="short3Title">Short: Quick Edit</h3>
+                    <p data-translate-key="short3Desc">Fast video transformation</p>
                 </div>
             </div>
-            <!-- Short 4 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/9bZkp7q19f0" title="YouTube Short 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: Trending Edit</h3>
-                    <p>Popular style in 15s</p>
-                </div>
-            </div>
-            <!-- Short 5 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/LsoLEjrDogU" title="YouTube Short 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: AI Magic</h3>
-                    <p>AI-powered quick tip</p>
-                </div>
-            </div>
-            <!-- Short 6 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/JGwWNGJdvx8" title="YouTube Short 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: Fast Montage</h3>
-                    <p>Quick scene cuts</p>
-                </div>
-            </div>
-            <!-- Short 7 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/OPf0YbXqDm0" title="YouTube Short 7" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: Color Grading</h3>
-                    <p>Before & After in 20s</p>
-                </div>
-            </div>
-            <!-- Short 8 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/60ItHLz5WEA" title="YouTube Short 8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: Quick Tips</h3>
-                    <p>Editing hack in 10s</p>
-                </div>
-            </div>
-            <!-- Short 9 -->
-            <div class="video-card card">
-                <div class="video-container" style="padding-bottom: 177.78%;">
-                    <iframe src="https://www.youtube.com/embed/kJQP7kiw5Fk" title="YouTube Short 9" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-                <div class="video-info">
-                    <h3>Short: Music Sync</h3>
-                    <p>Editing to the beat</p>
-                </div>
-            </div>
+        </div>
+    </div>
 </section>
 
 <div class="container" style="text-align: center; margin: 30px auto; width: 100%; max-width: 100%;">
@@ -1708,58 +1575,58 @@
                width: auto;
                border-radius: 50px;
                animation: pulse 2s infinite;
-               text-align: center;">
+               text-align: center;" data-translate-key="seeMoreBtn">
         <i class="fab fa-youtube" style="margin-right: 10px;"></i> See More
     </a>
 </div>
     <!-- Testimonials Section -->
     <section id="testimonials">
         <div class="container">
-            <h2 class="section-title">Client Testimonials</h2>
+            <h2 class="section-title" data-translate-key="testimonialsTitle">Client Testimonials</h2>
             
             <div class="testimonial-slider">
                 <div class="testimonial-slide active">
                     <div class="testimonial-card card">
                         <i class="fas fa-quote-left"></i>
-                        <p>Abdur Labib transformed our corporate training videos into engaging content that our employees actually want to watch. The AI-enhanced scripts and professional editing made all the difference.</p>
+                        <p data-translate-key="testimonial1Text">Abdur Labib transformed our corporate training videos into engaging content that our employees actually want to watch. The AI-enhanced scripts and professional editing made all the difference.</p>
                         <div class="client-info">
                             <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="client-img">
                             <div>
-                                <div class="client-name">John Smith</div>
-                                <div>CEO, TechSolutions</div>
+                                <div class="client-name" data-translate-key="testimonial1Name">John Smith</div>
+                                <div data-translate-key="testimonial1Role">CEO, TechSolutions</div>
                             </div>
                         </div>
-                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')" data-translate-key="clickBtn">Click</button>
                     </div>
                 </div>
                 
                 <div class="testimonial-slide">
                     <div class="testimonial-card card">
                         <i class="fas fa-quote-left"></i>
-                        <p>Working with Rajibul has been a game-changer for my YouTube channel. My subscriber count doubled after implementing his editing style and thumbnail designs. The AI tools he uses save me so much time!</p>
+                        <p data-translate-key="testimonial2Text">Working with Rajibul has been a game-changer for my YouTube channel. My subscriber count doubled after implementing his editing style and thumbnail designs. The AI tools he uses save me so much time!</p>
                         <div class="client-info">
                             <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="client-img">
                             <div>
-                                <div class="client-name">Sarah Johnson</div>
-                                <div>Travel Vlogger</div>
+                                <div class="client-name" data-translate-key="testimonial2Name">Sarah Johnson</div>
+                                <div data-translate-key="testimonial2Role">Travel Vlogger</div>
                             </div>
                         </div>
-                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')" data-translate-key="clickBtn">Click</button>
                     </div>
                 </div>
                 
                 <div class="testimonial-slide">
                     <div class="testimonial-card card">
                         <i class="fas fa-quote-left"></i>
-                        <p>The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.</p>
+                        <p data-translate-key="testimonial3Text">The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.</p>
                         <div class="client-info">
                                 <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Client" class="client-img">
                                 <div>
-                                    <div class="client-name">Hightechvaly</div>
-                                    <div>Documentary Producer</div>
+                                    <div class="client-name" data-translate-key="testimonial3Name">Hightechvaly</div>
+                                    <div data-translate-key="testimonial3Role">Documentary Producer</div>
                                 </div>
                         </div>
-                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')">Click</button>
+                        <button class="testimonial-btn" style="position: absolute; top: 10px; right: 10px; background: var(--accent-gradient); color: white; border: none; padding: 5px 10px; border-radius: 5px; cursor: pointer;" onclick="window.open('https://youtu.be/ysMB3GjVpw8?si=XqTihrw5LBelvOld', '_blank')" data-translate-key="clickBtn">Click</button>
                     </div>
                 </div>
                 <div class="slider-navigation">
@@ -1773,51 +1640,51 @@
     <!-- FAQ Section -->
     <section id="faq">
         <div class="container">
-            <h2 class="section-title">Frequently Asked Questions</h2>
+            <h2 class="section-title" data-translate-key="faqTitle">Frequently Asked Questions</h2>
             <div class="accordion">
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span>What are your rates?</span>
+                        <span data-translate-key="faq1Question">What are your rates?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>Pricing varies based on project complexity, duration, and specific requirements. Basic video editing starts at $50 per minute of final content. AI services start at $30 per task. Contact me with your project details for an accurate quote.</p>
+                        <p data-translate-key="faq1Answer">Pricing varies based on project complexity, duration, and specific requirements. Basic video editing starts at $50 per minute of final content. AI services start at $30 per task. Contact me with your project details for an accurate quote.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span>How many revisions do you allow?</span>
+                        <span data-translate-key="faq2Question">How many revisions do you allow?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>I include 2 rounds of revisions in my standard pricing. Additional revisions can be arranged at an hourly rate. For AI services, we provide unlimited iterations until you're satisfied with the output.</p>
+                        <p data-translate-key="faq2Answer">I include 2 rounds of revisions in my standard pricing. Additional revisions can be arranged at an hourly rate. For AI services, we provide unlimited iterations until you're satisfied with the output.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span>What's your typical turnaround time?</span>
+                        <span data-translate-key="faq3Question">What's your typical turnaround time?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>For a standard 10-minute video, turnaround is 3-5 business days. Rush services are available for an additional fee. AI services typically deliver within 24-48 hours depending on complexity.</p>
+                        <p data-translate-key="faq3Answer">For a standard 10-minute video, turnaround is 3-5 business days. Rush services are available for an additional fee. AI services typically deliver within 24-48 hours depending on complexity.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span>What file formats do you deliver?</span>
+                        <span data-translate-key="faq4Question">What file formats do you deliver?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>Final videos are delivered in MP4 (H.264) format by default, but I can provide any format you need (MOV, AVI, ProRes, etc.). For AI services, we provide standard image formats (JPG, PNG) or specified formats.</p>
+                        <p data-translate-key="faq4Answer">Final videos are delivered in MP4 (H.264) format by default, but I can provide any format you need (MOV, AVI, ProRes, etc.). For AI services, we provide standard image formats (JPG, PNG) or specified formats.</p>
                     </div>
                 </div>
                 <div class="accordion-item">
                     <div class="accordion-header">
-                        <span>Who owns the copyright to the final product?</span>
+                        <span data-translate-key="faq5Question">Who owns the copyright to the final product?</span>
                         <i class="fas fa-chevron-down"></i>
                     </div>
                     <div class="accordion-content">
-                        <p>You retain full rights to all final deliverables. I only request permission to include the work in my portfolio unless otherwise specified. For AI-generated content, all rights are transferred to you upon payment.</p>
+                        <p data-translate-key="faq5Answer">You retain full rights to all final deliverables. I only request permission to include the work in my portfolio unless otherwise specified. For AI-generated content, all rights are transferred to you upon payment.</p>
                     </div>
                 </div>
             </div>
@@ -1827,13 +1694,13 @@
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">
-            <h2 class="section-title">Contact Me</h2>
+            <h2 class="section-title" data-translate-key="contactTitle">Contact Me</h2>
             <div class="contact-container" style="padding: 0;">
                 <div class="contact-info" style="width: 100%;">
                     <div class="contact-item" style="padding: 15px;">
                         <i class="fas fa-envelope"></i>
                         <div>
-                            <h4 style="font-size: 1em;">Email</h4>
+                            <h4 style="font-size: 1em;" data-translate-key="contactEmail">Email</h4>
                             <a href="mailto:mdrajibulislam360@gmail.com" style="font-size: 0.95em;">mdrajibulislam360@gmail.com</a>
                         </div>
                     </div>
@@ -1847,27 +1714,27 @@
                     <div class="contact-item" style="padding: 15px;">
                         <i class="fas fa-phone-alt"></i>
                         <div>
-                            <h4 style="font-size: 1em;">Phone</h4>
+                            <h4 style="font-size: 1em;" data-translate-key="contactPhone">Phone</h4>
                             <a href="tel:+8801560065230" style="font-size: 0.95em;">+880 1560065230</a>
                         </div>
                     </div>
                     <div class="contact-item" style="padding: 15px;">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
-                            <h4 style="font-size: 1em;">Location</h4>
-                            <span style="font-size: 0.95em;">Dhaka, Bangladesh (Remote work available worldwide)</span>
+                            <h4 style="font-size: 1em;" data-translate-key="contactLocation">Location</h4>
+                            <span style="font-size: 0.95em;" data-translate-key="contactLocationDesc">Dhaka, Bangladesh (Remote work available worldwide)</span>
                         </div>
                     </div>
                     <div class="contact-item" style="padding: 15px;">
                         <i class="fas fa-clock"></i>
                         <div>
-                            <h4 style="font-size: 1em;">Availability</h4>
-                            <span style="font-size: 0.95em;">Full time</span>
+                            <h4 style="font-size: 1em;" data-translate-key="contactAvailability">Availability</h4>
+                            <span style="font-size: 0.95em;" data-translate-key="contactAvailabilityDesc">Full time</span>
                         </div>
                     </div>
                     <!-- Social Media Section -->
                     <div class="social-section card" style="padding: 20px; margin-top: 20px;">
-                        <h3 style="font-size: 1.2em;">Connect With Me</h3>
+                        <h3 style="font-size: 1.2em;" data-translate-key="connectWithMe">Connect With Me</h3>
                         <div class="social-links" style="gap: 10px;">
                             <a href="https://www.youtube.com/@abdurlabib1" target="_blank" class="social-btn youtube">
                                 <i class="fab fa-youtube"></i>
@@ -2004,17 +1871,16 @@
         <div class="container">
             <div class="footer-logo">MD RAJIBUL <span>ISLAM</span></div>
             <ul class="footer-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#services">Services</a></li>
-            
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
+                 <li><a href="#" data-translate-key="navHome">Home</a></li>
+                 <li><a href="#about" data-translate-key="navAbout">About</a></li>
+                 <li><a href="#skills" data-translate-key="navSkills">Skills</a></li>
+                 <li><a href="#services" data-translate-key="navServices">Services</a></li>
+                 <li><a href="#gallery" data-translate-key="navGallery">Gallery</a></li>
+                 <li><a href="#testimonials" data-translate-key="navTestimonials">Testimonials</a></li>
+                 <li><a href="#faq" data-translate-key="navFaq">FAQ</a></li>
+                 <li><a href="#contact" data-translate-key="navContact">Contact</a></li>
             </ul>
-            <div class="copyright">© 2023 MD RAJIBUL ISLAM. All Rights Reserved.</div>
+            <div class="copyright" data-translate-key="copyright">© 2023 MD RAJIBUL ISLAM. All Rights Reserved.</div>
         </div>
     </footer>
 
@@ -2025,6 +1891,161 @@
 
     <!-- JavaScript -->
     <script>
+        // --- START: DYNAMIC LANGUAGE TOGGLE SYSTEM ---
+
+        // 1. All translations are stored here.
+        // To add a new translation, add a key and its 'en' and 'bn' versions.
+        const translations = {
+            // Navigation
+            navHome: { en: "Home", bn: "হোম" },
+            navAbout: { en: "About", bn: "সম্পর্কে" },
+            navSkills: { en: "Skills", bn: "দক্ষতা" },
+            navServices: { en: "Services", bn: "সেবা" },
+            navGallery: { en: "Gallery", bn: "গ্যালারি" },
+            navTestimonials: { en: "Testimonials", bn: "প্রশংসাপত্র" },
+            navFaq: { en: "FAQ", bn: "প্রশ্নাবলী" },
+            navContact: { en: "Contact", bn: "যোগাযোগ" },
+            // Profile
+            profileName: { en: "MD RAJIBUL ISLAM", bn: "মো: রাজিবুল ইসলাম" },
+            profileTitle: { en: "Professional Video Editor • Motion Designer • AI Content Creator", bn: "পেশাদার ভিডিও এডিটর • মোশন ডিজাইনার • এআই কন্টেন্ট ক্রিয়েটর" },
+            // About
+            aboutTitle: { en: "About Me", bn: "আমার সম্পর্কে" },
+            aboutText1: { en: `Hi, I'm <span style="color: #6a11cb; font-weight: 600;">Rajibul</span><br><br>A Professional video editor who loves telling real stories—especially in news, documentaries, and corporate content. I take raw footage and shape it into edits that actually mean something. Stuff that informs, connects, and sticks with people.`, bn: `হাই, আমি <span style="color: #6a11cb; font-weight: 600;">রাজিবুল</span><br><br>একজন পেশাদার ভিডিও এডিটর যিনি বাস্তব গল্প বলতে ভালোবাসেন—বিশেষ করে সংবাদ, ডকুমেন্টারি এবং কর্পোরেট কন্টেন্টে। আমি র ফুটেজকে এমনভাবে এডিট করি যা অর্থবহ। যা মানুষকে তথ্য দেয়, সংযুক্ত করে এবং মনে দাগ কাটে।` },
+            aboutText2: { en: `<span class="about-highlight">How I Work</span><br><br>I keep things honest, clean, and engaging. My edits are built on solid storytelling, with the right rhythm and emotion to hold attention without losing the message. Every cut has a purpose. Every frame matters.`, bn: `<span class="about-highlight">আমি যেভাবে কাজ করি</span><br><br>আমি সততা, পরিচ্ছন্নতা এবং আকর্ষণীয়ভাবে কাজ করি। আমার এডিটগুলো শক্তিশালী গল্প বলার উপর ভিত্তি করে তৈরি, সঠিক ছন্দ এবং আবেগ দিয়ে মনোযোগ ধরে রাখি। প্রতিটি কাটের একটি উদ্দেশ্য আছে। প্রতিটি ফ্রেম গুরুত্বপূর্ণ।` },
+            // Skills
+            skillsTitle: { en: "My Skills & Tools", bn: "আমার দক্ষতা এবং টুলস" },
+            skill1Title: { en: "Video Editing", bn: "ভিডিও এডিটিং" },
+            skill1Tools: { en: "Adobe Premiere Pro, DaVinci Resolve", bn: "অ্যাডোবি প্রিমিয়ার প্রো, ডাভিঞ্চি রিজলভ" },
+            skill2Title: { en: "Motion Graphics", bn: "মোশন গ্রাফিক্স" },
+            skill2Tools: { en: "After Effects, Blender", bn: "আফটার ইফেক্টস, ব্লেন্ডার" },
+            skill3Title: { en: "Graphic Design", bn: "গ্রাফিক ডিজাইন" },
+            skill3Tools: { en: "Photoshop, Illustrator, Canva", bn: "ফটোশপ, ইলাস্ট্রেটর, ক্যানভা" },
+            skill4Title: { en: "AI Tools", bn: "এআই টুলস" },
+            skill4Tools: { en: "ChatGPT, Midjourney, Adobe Sensei, AI Voiceovers", bn: "চ্যাটজিপিটি, মিডজার্নি, অ্যাডোবি সেন্সেই, এআই ভয়েসওভার" },
+            // Services
+            servicesTitle: { en: "My Services", bn: "আমার সেবাসমূহ" },
+            servicesTab1: { en: "Video Services", bn: "ভিডিও সেবা" },
+            servicesTab2: { en: "AI Services", bn: "এআই সেবা" },
+            service1Title: { en: "YouTube Editing", bn: "ইউটিউব এডিটিং" },
+            service1Desc: { en: "Engaging edits for vlogs, tutorials, reviews, and more with optimized pacing, transitions, and effects.", bn: "ব্লগ, টিউটোরিয়াল, রিভিউ এবং আরও অনেক কিছুর জন্য আকর্ষণীয় এডিটিং, সাথে অপ্টিমাইজড পেসিং, ট্রানজিশন এবং ইফেক্টস।" },
+            service2Title: { en: "Documentary Edits", bn: "ডকুমেন্টারি এডিটিং" },
+            service2Desc: { en: "Thoughtful storytelling with proper narrative flow, b-roll integration, and emotional impact.", bn: "সঠিক বর্ণনা, বি-রোল এবং আবেগপূর্ণ প্রভাব সহ চিন্তাশীল গল্প বলা।" },
+            service3Title: { en: "Talking-head Videos", bn: "টকিং-হেড ভিডিও" },
+            service3Desc: { en: "Clean edits for interviews, presentations, and educational content with professional polish.", bn: "সাক্ষাৎকার, উপস্থাপনা এবং শিক্ষামূলক কন্টেন্টের জন্য পেশাদার এবং পরিচ্ছন্ন এডিটিং।" },
+            service4Title: { en: "Vlogs", bn: "ব্লগ" },
+            service4Desc: { en: "Dynamic edits that maintain authenticity while enhancing entertainment value.", bn: "বিনোদনমূলক মান বাড়ানোর সাথে সাথে সত্যতা বজায় রেখে ডাইনামিক এডিটিং।" },
+            service5Title: { en: "Product Promos", bn: "পণ্য প্রচার" },
+            service5Desc: { en: "Highlight features and benefits with compelling visuals and persuasive pacing.", bn: "আকর্ষণীয় ভিজ্যুয়াল এবং প্ররোচনামূলক পেসিং সহ বৈশিষ্ট্য এবং সুবিধাগুলি তুলে ধরা।" },
+            service6Title: { en: "Corporate Edits", bn: "কর্পোরেট এডিটিং" },
+            service6Desc: { en: "Professional videos for businesses, training, and internal communications.", bn: "ব্যবসা, প্রশিক্ষণ এবং অভ্যন্তরীণ যোগাযোগের জন্য পেশাদার ভিডিও।" },
+            service7Title: { en: "Prompt Writing", bn: "প্রম্পট রাইটিং" },
+            service7Desc: { en: "Expertly crafted prompts for AI tools to generate exactly what you need.", bn: "আপনার প্রয়োজন অনুযায়ী কন্টেন্ট তৈরি করতে এআই সরঞ্জামগুলির জন্য দক্ষতার সাথে প্রম্পট তৈরি করা।" },
+            service8Title: { en: "Script Writing", bn: "স্ক্রিপ্ট রাইটিং" },
+            service8Desc: { en: "AI-assisted script writing that maintains human authenticity and engagement.", bn: "এআই-সহায়তায় স্ক্রিপ্ট লেখা যা মানুষের সত্যতা এবং সম্পৃক্ততা বজায় রাখে।" },
+            service9Title: { en: "AI Video/Image Generation", bn: "এআই ভিডিও/ছবি তৈরি" },
+            service9Desc: { en: "Create custom visuals and video elements using the latest AI tools.", bn: "সর্বশেষ এআই টুল ব্যবহার করে কাস্টম ভিজ্যুয়াল এবং ভিডিও উপাদান তৈরি করা।" },
+            service10Title: { en: "AI Voiceovers", bn: "এআই ভয়েসওভার" },
+            service10Desc: { en: "Natural-sounding male and female voices in multiple languages and accents.", bn: "একাধিক ভাষায় এবং উচ্চারণে স্বাভাবিক звучаয় পুরুষ এবং মহিলা কণ্ঠ।" },
+            service11Title: { en: "AI Image Editing", bn: "এআই ছবি এডিটিং" },
+            service11Desc: { en: "Enhance, restore, or transform images with AI-powered tools.", bn: "এআই-চালিত সরঞ্জামগুলির সাহায্যে চিত্রগুলিকে উন্নত, পুনরুদ্ধার বা রূপান্তরিত করা।" },
+            service12Title: { en: "AI Thumbnail Design", bn: "এআই থাম্বনেইল ডিজাইন" },
+            service12Desc: { en: "Data-driven thumbnail designs optimized for maximum click-through rates.", bn: "সর্বাধিক ক্লিক-থ্রু হারের জন্য অপ্টিমাইজ করা ডেটা-চালিত থাম্বনেইল ডিজাইন।" },
+             // Gallery
+            galleryTitle: { en: "YouTube Video Gallery", bn: "ইউটিউব ভিডিও গ্যালারি" },
+            video1Title: { en: "Documentary & Motion graphic", bn: "ডকুমেন্টারি ও মোশন গ্রাফিক" },
+            video1Desc: { en: "Premiere Pro | After Effects & AI", bn: "প্রিমিয়ার প্রো | আফটার ইফেক্টস ও এআই" },
+            video2Title: { en: "Animation & Motion Graphic", bn: "অ্যানিমেশন ও মোশন গ্রাফিক" },
+            video2Desc: { en: "Detailed Analysis with B-Roll", bn: "বি-রোল সহ বিস্তারিত বিশ্লেষণ" },
+            video3Title: { en: "YouTube video Editing", bn: "ইউটিউব ভিডিও এডিটিং" },
+            video3Desc: { en: "Animation & Motion Graphic", bn: "অ্যানিমেশন ও মোশন গ্রাফিক" },
+            video4Title: { en: "Talking Head NEWS Video Editing", bn: "টকিং হেড নিউজ ভিডিও এডিটিং" },
+            video4Desc: { en: "click here to see more information", bn: "আরও তথ্যের জন্য এখানে ক্লিক করুন" },
+            video5Title: { en: "Talking Head NEWS Video Editing", bn: "টকিং হেড নিউজ ভিডিও এডিটিং" },
+            video5Desc: { en: "From audio to color, every element in this video was custom-built — finalized with the Lord Third layer.", bn: "অডিও থেকে রঙ, এই ভিডিওর প্রতিটি উপাদান কাস্টম-বিল্ট — লর্ড থার্ড লেয়ার দিয়ে চূড়ান্ত করা হয়েছে।" },
+            video6Title: { en: "Cultural Documentary", bn: "সাংস্কৃতিক ডকুমেন্টারি" },
+            video6Desc: { en: "Local Traditions Showcase", bn: "স্থানীয় ঐতিহ্যের প্রদর্শনী" },
+            clickBtn: { en: "Click", bn: "ক্লিক করুন" },
+            seeMoreVideosBtn: { en: "See More Videos", bn: "আরও ভিডিও দেখুন" },
+            shortsTitle: { en: "YouTube Shorts", bn: "ইউটিউব শর্টস" },
+            short1Title: { en: "Wellcore Creatine By Rive Sup's", bn: "রিভ সাপস এর ওয়েলকোর ক্রিয়েটিন" },
+            short1Desc: { en: "Edit By MD RAJIBUL ISLAM", bn: "এডিট করেছেন মো: রাজিবুল ইসলাম" },
+            short2Title: { en: "Short: Animation Fun", bn: "শর্ট: অ্যানিমেশন ফান" },
+            short2Desc: { en: "Motion graphics in 30s", bn: "৩০ সেকেন্ডে মোশন গ্রাফিক্স" },
+            short3Title: { en: "Short: Quick Edit", bn: "শর্ট: দ্রুত এডিট" },
+            short3Desc: { en: "Fast video transformation", bn: "দ্রুত ভিডিও রূপান্তর" },
+            seeMoreBtn: { en: "See More", bn: "আরও দেখুন" },
+            // Testimonials
+            testimonialsTitle: { en: "Client Testimonials", bn: "ক্লায়েন্টের প্রশংসাপত্র" },
+            testimonial1Text: { en: "Abdur Labib transformed our corporate training videos into engaging content that our employees actually want to watch. The AI-enhanced scripts and professional editing made all the difference.", bn: "আব্দুর লাবিব আমাদের কর্পোরেট প্রশিক্ষণ ভিডিওগুলিকে এমন আকর্ষণীয় সামগ্রীতে রূপান্তরিত করেছেন যা আমাদের কর্মীরা আসলে দেখতে চায়। এআই-উন্নত স্ক্রিপ্ট এবং পেশাদার সম্পাদনা একটি বড় পার্থক্য তৈরি করেছে।" },
+            testimonial1Name: { en: "John Smith", bn: "জন স্মিথ" },
+            testimonial1Role: { en: "CEO, TechSolutions", bn: "সিইও, টেকসলিউশনস" },
+            testimonial2Text: { en: "Working with Rajibul has been a game-changer for my YouTube channel. My subscriber count doubled after implementing his editing style and thumbnail designs. The AI tools he uses save me so much time!", bn: "রাজিবুলের সাথে কাজ করা আমার ইউটিউব চ্যানেলের জন্য একটি গেম-চেঞ্জার হয়েছে। তার সম্পাদনার স্টাইল এবং থাম্বনেইল ডিজাইন প্রয়োগ করার পরে আমার সাবস্ক্রাইবার সংখ্যা দ্বিগুণ হয়েছে। তিনি যে এআই সরঞ্জামগুলি ব্যবহার করেন তা আমার অনেক সময় বাঁচায়!" },
+            testimonial2Name: { en: "Sarah Johnson", bn: "সারা জনসন" },
+            testimonial2Role: { en: "Travel Vlogger", bn: "ভ্রমণ ভ্লগার" },
+            testimonial3Text: { en: "The documentary edit exceeded all our expectations. Rajibul understood exactly how to pace the story for maximum emotional impact. His team delivered ahead of schedule and was a pleasure to work with.", bn: "ডকুমেন্টারি সম্পাদনাটি আমাদের সমস্ত প্রত্যাশা ছাড়িয়ে গেছে। রাজিবুল সর্বোচ্চ भावनात्मक প্রভাবের জন্য গল্পের গতি ঠিক কীভাবে রাখতে হয় তা পুরোপুরি বুঝতে পেরেছিলেন। তার দল নির্ধারিত সময়ের আগেই কাজ সরবরাহ করেছে এবং তাদের সাথে কাজ করাটা ছিল আনন্দের।" },
+            testimonial3Name: { en: "Hightechvaly", bn: "হাইটেকভ্যালি" },
+            testimonial3Role: { en: "Documentary Producer", bn: "ডকুমেন্টারি প্রযোজক" },
+            // FAQ
+            faqTitle: { en: "Frequently Asked Questions", bn: "সাধারণ জিজ্ঞাস্য প্রশ্নাবলী" },
+            faq1Question: { en: "What are your rates?", bn: "আপনার রেট কত?" },
+            faq1Answer: { en: "Pricing varies based on project complexity, duration, and specific requirements. Basic video editing starts at $50 per minute of final content. AI services start at $30 per task. Contact me with your project details for an accurate quote.", bn: "প্রকল্পের জটিলতা, সময়কাল এবং নির্দিষ্ট প্রয়োজনীয়তার উপর ভিত্তি করে মূল্য পরিবর্তিত হয়। বেসিক ভিডিও সম্পাদনা চূড়ান্ত কন্টেন্টের প্রতি মিনিটে $50 থেকে শুরু হয়। এআই পরিষেবাগুলি প্রতি টাস্কে $30 থেকে শুরু হয়। সঠিক উদ্ধৃতির জন্য আপনার প্রকল্পের বিবরণ সহ আমার সাথে যোগাযোগ করুন।" },
+            faq2Question: { en: "How many revisions do you allow?", bn: "আপনি কতগুলি রিভিশন দেন?" },
+            faq2Answer: { en: "I include 2 rounds of revisions in my standard pricing. Additional revisions can be arranged at an hourly rate. For AI services, we provide unlimited iterations until you're satisfied with the output.", bn: "আমি আমার স্ট্যান্ডার্ড মূল্যের মধ্যে ২ রাউন্ড রিভিশন অন্তর্ভুক্ত করি। অতিরিক্ত রিভিশন ঘন্টা প্রতি হারে ব্যবস্থা করা যেতে পারে। এআই পরিষেবাগুলির জন্য, আপনি আউটপুট নিয়ে সন্তুষ্ট না হওয়া পর্যন্ত আমরা সীমাহীন পুনরাবৃত্তি প্রদান করি।" },
+            faq3Question: { en: "What's your typical turnaround time?", bn: "আপনার সাধারণ টার্নঅ্যারাউন্ড সময় কত?" },
+            faq3Answer: { en: "For a standard 10-minute video, turnaround is 3-5 business days. Rush services are available for an additional fee. AI services typically deliver within 24-48 hours depending on complexity.", bn: "একটি স্ট্যান্ডার্ড ১০-মিনিটের ভিডিওর জন্য, টার্নঅ্যারাউন্ড সময় ৩-৫ কার্যদিবস। অতিরিক্ত ফির বিনিময়ে রাশ পরিষেবা উপলব্ধ। এআই পরিষেবাগুলি জটিলতার উপর নির্ভর করে সাধারণত ২৪-৪৮ ঘন্টার মধ্যে সরবরাহ করা হয়।" },
+            faq4Question: { en: "What file formats do you deliver?", bn: "আপনি কোন ফাইল ফরম্যাটে ডেলিভারি দেন?" },
+            faq4Answer: { en: "Final videos are delivered in MP4 (H.264) format by default, but I can provide any format you need (MOV, AVI, ProRes, etc.). For AI services, we provide standard image formats (JPG, PNG) or specified formats.", bn: "চূড়ান্ত ভিডিওগুলি ডিফল্টরূপে MP4 (H.264) ফর্ম্যাটে সরবরাহ করা হয়, তবে আমি আপনার প্রয়োজনীয় যেকোনো ফর্ম্যাট (MOV, AVI, ProRes, ইত্যাদি) সরবরাহ করতে পারি। এআই পরিষেবাগুলির জন্য, আমরা স্ট্যান্ডার্ড চিত্র ফর্ম্যাট (JPG, PNG) বা নির্দিষ্ট ফর্ম্যাট সরবরাহ করি।" },
+            faq5Question: { en: "Who owns the copyright to the final product?", bn: "চূড়ান্ত পণ্যের কপিরাইট কার?" },
+            faq5Answer: { en: "You retain full rights to all final deliverables. I only request permission to include the work in my portfolio unless otherwise specified. For AI-generated content, all rights are transferred to you upon payment.", bn: "আপনি সমস্ত চূড়ান্ত ডেলিভারেবলের সম্পূর্ণ অধিকার রাখেন। অন্যথায় নির্দিষ্ট না করা থাকলে আমি কেবল আমার পোর্টফোলিওতে কাজটি অন্তর্ভুক্ত করার অনুমতি চাই। এআই-জেনারেটেড সামগ্রীর জন্য, অর্থপ্রদানের পরে সমস্ত অধিকার আপনার কাছে স্থানান্তরিত হয়।" },
+            // Contact
+            contactTitle: { en: "Contact Me", bn: "আমার সাথে যোগাযোগ করুন" },
+            contactEmail: { en: "Email", bn: "ইমেইল" },
+            contactPhone: { en: "Phone", bn: "ফোন" },
+            contactLocation: { en: "Location", bn: "অবস্থান" },
+            contactLocationDesc: { en: "Dhaka, Bangladesh (Remote work available worldwide)", bn: "ঢাকা, বাংলাদেশ (সারা বিশ্বে দূরবর্তী কাজ উপলব্ধ)" },
+            contactAvailability: { en: "Availability", bn: "উপস্থিতি" },
+            contactAvailabilityDesc: { en: "Full time", bn: "পূর্ণকালীন" },
+            connectWithMe: { en: "Connect With Me", bn: "আমার সাথে সংযুক্ত হন" },
+            // Footer
+            copyright: { en: "© 2023 MD RAJIBUL ISLAM. All Rights Reserved.", bn: "© ২০২৩ মো: রাজিবুল ইসলাম। সর্বস্বত্ব সংরক্ষিত।" }
+        };
+
+        const languageToggle = document.getElementById('language-toggle');
+        let currentLang = localStorage.getItem('language') || 'en'; // Default to English
+
+        // 2. This function applies the selected language to the page
+        const setLanguage = (lang) => {
+            // Find all elements with the 'data-translate-key' attribute
+            document.querySelectorAll('[data-translate-key]').forEach(element => {
+                const key = element.getAttribute('data-translate-key');
+                if (translations[key] && translations[key][lang]) {
+                    // Use innerHTML to support keys with HTML tags like <span>
+                    element.innerHTML = translations[key][lang];
+                }
+            });
+            // Update the toggle button text to show the other language
+            languageToggle.textContent = lang === 'en' ? 'বাংলা' : 'English';
+            // Set the lang attribute on the HTML element for accessibility
+            document.documentElement.lang = lang;
+            // Save the user's preference
+            localStorage.setItem('language', lang);
+            currentLang = lang;
+        };
+
+        // 3. Add a click event to the toggle button
+        languageToggle.addEventListener('click', () => {
+            const newLang = currentLang === 'en' ? 'bn' : 'en';
+            setLanguage(newLang);
+        });
+
+        // 4. Set the initial language when the page loads
+        document.addEventListener('DOMContentLoaded', () => {
+            setLanguage(currentLang);
+        });
+
+
+        // --- END: DYNAMIC LANGUAGE TOGGLE SYSTEM ---
+
         // Mobile Menu Toggle
         const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
         const navLinks = document.querySelector('.nav-links');
@@ -2182,3 +2203,4 @@
     </script>
 </body>
 </html>
+```
